@@ -8,10 +8,10 @@ Vous pouvez visualiser le résultat a l'adresse suivante : https://pompidup.gith
 
 ## Built With
 
-* [ANGULAR](https://angular.io/)
+* [Angular](https://angular.io/)
 * [Bootstrap](https://www.bootstrapcdn.com/)
 * [TS](https://www.typescriptlang.org/)
-* [API NASA](https://api.nasa.gov/)
+* [Api Nasa](https://api.nasa.gov/)
 * [CSS]
 
 
