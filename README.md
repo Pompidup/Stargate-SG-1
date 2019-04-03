@@ -4,7 +4,7 @@ Création d'un site pour la [Wild Code School](https://wildcodeschool.fr/) ayant
 
 ## Getting Started
 
-Vous pouvez visualiser le résultat a l'adresse suivante : https://pompidup.github.io/Stargate/
+Vous pouvez visualiser le résultat a l'adresse suivante : https://pompidup.github.io/Stargate-SG-1/. 
 
 ## Built With
 
