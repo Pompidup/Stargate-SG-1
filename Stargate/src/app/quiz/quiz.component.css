@@ -1,0 +1,42 @@
+/* CSS version mobile par défaut */
+
+body  {
+    background-image: url(../../assets/images/fond_accueil.jpg);
+}
+
+.logo img {
+    width: 50%;
+    height:20%;
+}
+
+.quiz img {
+    width : 80%;
+    height: 20%;
+}
+
+.quiz h2 {
+    font-size: 1.5rem;
+}
+
+.firstQuestion {
+    text-decoration: underline;
+}
+
+.answers img {
+    width:10%;
+    height:10%
+}
+
+.answers p {
+    font-size: 1.2rem;
+}
+
+.buttons {
+    position: fixed ;
+    bottom : 5%;
+}
+
+.blockQuestion {
+    margin-left: 5%;
+    margin-right: 5%
+}

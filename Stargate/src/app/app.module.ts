@@ -19,6 +19,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ContactUsComponent
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule
   ],
