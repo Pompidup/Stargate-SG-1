@@ -7,6 +7,7 @@ import { StargateComponent } from './stargate/stargate.component';
 import { HightscoreComponent } from './hightscore/hightscore.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestComponent } from './quest/quest.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { QuestComponent } from './quest/quest.component';
     StargateComponent,
     HightscoreComponent,
     QuizComponent,
-    QuestComponent
+    QuestComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
