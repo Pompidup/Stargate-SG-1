@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StargateComponent } from './stargate/stargate.component';
@@ -19,7 +19,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ContactUsComponent
   ],
   imports: [
-    NgbModule,
     BrowserModule,
     AppRoutingModule
   ],
