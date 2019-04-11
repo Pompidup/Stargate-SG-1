@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>QuizPage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
 </head>
 
 <body>
@@ -42,13 +42,13 @@
 
       <div class="container buttons">
         <div class="row ml-0 mr-0 ">
-          <button type="button" class="col-4 btn btn-light">MAIN PAGE</button>
+          <button type="button" class="col-4 btn btn-light" ><a [routerLink]="['']">Home</a></button>
           <div class="col-4"></div>
-          <button type="button" class="col-4 btn btn-success">FINISH</button>
+          <button type="button" class="col-4 btn btn-success"><a [routerLink]="['../quiz']">Finish</a></button>
         </div>
       </div>
 
-      
+
     </div>
   </div>
 </body>
