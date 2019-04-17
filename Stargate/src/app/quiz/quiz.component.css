@@ -1,7 +1,7 @@
 /* CSS version mobile par défaut */
 
 body  {
-    background-image: url(../../assets/images/fond_accueil.jpg);
+    background-color: transparent;
 }
 
 .logo img {

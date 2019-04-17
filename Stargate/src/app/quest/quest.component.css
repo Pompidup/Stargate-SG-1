@@ -1,0 +1,21 @@
+body {
+    background: url(../../assets/images/fond_accueil.jpg) center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.table{
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.logo{
+    width: ;
+}
+p{
+    color: white;
+}
+

@@ -1,20 +1,41 @@
 table{
-    border: solid black 1px;
-    width:35%;
-    
-    border-collapse:collapse;
-}
-td{
-    border: solid black 2px;
-    background-color: rgb(227, 239, 248);  
 
+    width:60%;
+
+    border-collapse:collapse;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    white-space: nowrap;
 }
+
+
+
 .premier{
-    color:green;
+    color:red;
+    font-size: 0.8rem;
 }
-.dernier{
-    color: red;
+.deuxieme{
+    color: orange;
+    font-size: 0.8rem;
 }
-.gold{
-    color: goldenrod;
+.troisieme{
+    color: yellow;
+    font-size: 0.8rem;
 }
+.score{
+    color: rgb(236, 16, 236);
+    font-size: 2rem
+}
+.head{
+    color: pink;
+    font-size: 1rem;
+}
+.rainbow-box {
+
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+
+
+    width: 100%;
+  }
