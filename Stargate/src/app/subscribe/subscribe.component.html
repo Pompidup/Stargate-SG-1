@@ -1,0 +1,70 @@
+<button class="colorbutton" (click)="toggle()" id="bt">
+  {{buttonName}}
+</button>
+
+<ng-container *ngIf="show">
+
+  <form class=" subscribe container-fluid" (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <div class="row">
+      <div class="container-fluid">
+        <p>SUBSCRIBE</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At dolores doloribus enim quibusdam
+          optio maxime tempore quis, provident illum. Doloribus at nemo excepturi ipsum debitis animi officiis hic
+          veniam
+          maxime?</p>
+      </div>
+
+      <div class="formulaire col-12">
+        <div class="pseudonyme  ">
+          <div>
+            <label class="titre col-12" for="pseudo-order">Pseudo</label>
+            <input name="pseudo-order" type="text" [(ngModel)]="model.pseudo" #pseudo="ngModel" required minlength="4"
+              maxlength="20">
+          </div>
+          <div *ngIf="myForm.submitted">
+            <div *ngIf="pseudo.errors">
+              <span class="champ" *ngIf="pseudo.errors.required">Votre pseudo doit contenir au minimum 4 caractères </span>
+              <span class="champ" *ngIf="pseudo.errors.maxlength">Votre pseudo ne doit pas dépasser 20 caractères</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lemail  ">
+          <div>
+            <label class="titre col-12" for="contactmail-order">Email</label>
+            <input name="contactmail-order" type="email" [(ngModel)]="model.contactmail" #contactmail="ngModel" required
+              email>
+          </div>
+          <div *ngIf="myForm.submitted">
+            <div *ngIf="contactmail.errors">
+              <span class="champ" *ngIf="contactmail.errors.required">Vous devez remplir le champ avec un mail</span>
+              <span class="champ"*ngIf="contactmail.errors.email">L'adresse email est invalide</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="motdepasse ">
+          <div>
+            <label class=" titre col-12" for="password-order">Password</label>
+            <input name="password-order" type="text" [(ngModel)]="model.password" #password="ngModel" required
+              minlength="4" maxlength="15">
+          </div>
+          <div *ngIf="myForm.submitted">
+            <div *ngIf="password.errors">
+              <span class="champ" *ngIf="password.errors.required">Le champs de password doit dépasser 4 caractères </span>
+              <span class="champ" *ngIf="password.errors.maxlength">Le champs de password ne doit pas dépasser 25 caractères</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container-fluid ">
+        <button class="col-6 allbutton" type="reset">Refresh</button>
+
+        <button class="col-6 allbutton" type="submit">Save</button>
+      </div>
+    </div>
+  </form>
+
+</ng-container>
