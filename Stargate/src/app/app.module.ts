@@ -9,12 +9,8 @@ import { HightscoreComponent } from './hightscore/hightscore.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestComponent } from './quest/quest.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-<<<<<<< HEAD
 import { PictureViewerComponent } from './picture-viewer/picture-viewer.component';
-
-=======
 import { SubscribeComponent } from './subscribe/subscribe.component';
->>>>>>> d03e29c9338b1175240d4a45e24c644252734839
 
 @NgModule({
   declarations: [
@@ -24,12 +20,9 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     QuizComponent,
     QuestComponent,
     ContactUsComponent,
-<<<<<<< HEAD
     PictureViewerComponent,
 
-=======
     SubscribeComponent
->>>>>>> d03e29c9338b1175240d4a45e24c644252734839
   ],
   imports: [
     FormsModule,
