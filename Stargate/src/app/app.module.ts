@@ -9,6 +9,7 @@ import { HightscoreComponent } from './hightscore/hightscore.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestComponent } from './quest/quest.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PictureViewerComponent } from './picture-viewer/picture-viewer.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 
 @NgModule({
@@ -19,6 +20,8 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     QuizComponent,
     QuestComponent,
     ContactUsComponent,
+    PictureViewerComponent,
+
     SubscribeComponent
   ],
   imports: [
