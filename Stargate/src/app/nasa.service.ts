@@ -3,17 +3,19 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class NasaService {
   constructor(private myService: HttpClient) {
 
   }
 
-  public getNasaImages(param_query: string): Observable<string[]> {
+  public getNasaresults(param_query: string): Observable<any> {
 
-    const url: string = "https://images-api.nasa.gov/search?q" + param_query;
+    const url: string = "https://images-api.nasa.gov/search?q=" + param_query;
 
     const obs: Observable<any> = this.myService.get(url);
 
@@ -29,11 +31,9 @@ export class NasaService {
         current = items[i];
 
         if (current.links.length > 0) {
-          results.push(current.links[0].href);
+          results.push(current);
         }
-
       }
-
       return results;
     };
     return obs.pipe(map(treatment));
