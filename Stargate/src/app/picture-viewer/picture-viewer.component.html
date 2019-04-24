@@ -4,4 +4,18 @@
 <h1>Picture viewer</h1>
 
 
-<div *ngFor="let img of images"><img src={{img}}></div>
+  <div *ngFor="let img of results">
+    <img src={{img.links[0].href}}>
+    {{img.data[0].description}}
+    {{img.data[0].nasa_id}}
+  </div>
+
+
+
+<h1> Test 2éme service API NASA</h1>
+
+
+<div *ngFor="let id of resultsEpic">
+    {{id}}
+
+  </div>
