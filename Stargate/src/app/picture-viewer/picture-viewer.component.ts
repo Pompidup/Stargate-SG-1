@@ -1,44 +1,25 @@
-import { Component } from '@angular/core';
-import { NasaService } from '../nasa.service';
-import { NasaEPICService } from '../nasa-epic.service';
+
+import { Component, OnInit } from '@angular/core';
+import { quest1 } from '../nasaConst';
+import { nasa } from '../nasaClassInfo';
+
 
 @Component({
   selector: 'app-picture-viewer',
   templateUrl: './picture-viewer.component.html',
   styleUrls: ['./picture-viewer.component.css']
 })
+export class PictureViewerComponent implements OnInit {
 
-export class PictureViewerComponent {
+  public firstQuest: nasa[] = quest1;
 
-  results: string[];
 
-  constructor(private myService: NasaService) {
-    this.results = [];
+    constructor() {
 
-    this.myService.getNasaresults("saturn").subscribe(
-      (param_nasa: string[]) => {
-        this.results = param_nasa;
-        console.log(this.results[0]);
-      }
-    )
+
+     }
+
+    ngOnInit() {
+    }
+
   }
-}
-/*
-export class PictureViewerComponent {
-  resultsEpic: string[];
-
-  constructor(private myEpicService: NasaEPICService) {
-    this.resultsEpic = [];
-
-    this.myEpicService.getNasaEpicResults().subscribe(
-      (cacahuete: string[]) => {
-        this.resultsEpic = cacahuete;
-        console.log(this.resultsEpic);
-      }
-    )
-  }
-
-}
-*/
-
-

@@ -1,21 +1,14 @@
 
-
-
-<h1>Picture viewer</h1>
-
-
-  <div *ngFor="let img of results">
-    <img src={{img.links[0].href}}>
-    {{img.data[0].description}}
-    {{img.data[0].nasa_id}}
-  </div>
-
-
-
-<h1> Test 2éme service API NASA</h1>
-
-
-<div *ngFor="let id of resultsEpic">
-    {{id}}
-
-  </div>
+<table alt="Card image cap" *ngFor="let banane of firstQuest">
+    <div class="tab">
+        <tr>
+        <th>Title :</th><td><span *ngIf="banane.title"> {{banane.title}}</span><span *ngIf="!banane.title">pas de title</span></td>
+        </tr>
+        <tr>
+        <th>Description :</th><td><span *ngIf="banane.description"> {{banane.description}}</span><span *ngIf="!banane.description">pas de description</span></td>
+        </tr>
+        <tr>
+        <th>image :</th><td><span *ngIf="banane.image"><img src='{{banane.image}}'></span><span *ngIf="!banane.image">pas d'image</span></td>
+        </tr>
+    </div>
+</table>

@@ -11,6 +11,7 @@ import { QuestComponent } from './quest/quest.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PictureViewerComponent } from './picture-viewer/picture-viewer.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { NasaService } from './nasa.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [NasaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
