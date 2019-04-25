@@ -10,7 +10,10 @@ import { QuizComponent } from './quiz/quiz.component';
 import { QuestComponent } from './quest/quest.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OnlyquizComponent } from './onlyquiz/onlyquiz.component';
-
+import { NasaService } from './nasa.service';
+import { PictureViewerComponent } from './picture-viewer/picture-viewer.component';
+import { SubscribeComponent } from './subscribe/subscribe.component'
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,9 @@ import { OnlyquizComponent } from './onlyquiz/onlyquiz.component';
     QuizComponent,
     QuestComponent,
     ContactUsComponent,
-    OnlyquizComponent
+    OnlyquizComponent,
+    PictureViewerComponent,
+    SubscribeComponent,
   ],
   imports: [
     FormsModule,
