@@ -1,0 +1,143 @@
+.container{
+    margin: auto;
+    width: 512px;
+}
+
+.rotation1{ transform: rotate(45deg); }
+.rotation2{ transform: rotate(180deg); }
+.rotation3{ transform: rotate(117deg); }
+.rotation4{ transform: rotate(30deg); }
+.rotation5{ transform: rotate(89deg); }
+.rotation6{ transform: rotate(40deg); }
+.rotation7{ transform: rotate(270deg); }
+
+.stargate {
+    position: relative;
+    z-index: 100;
+    width: 512px;
+}
+
+.stargate .gate {
+    position: absolute;
+    z-index: 80;
+    width: 512px;
+    height: 512px;
+    background: url("../../assets/images/gate.png");
+}
+
+.stargate .ring-container {
+    position: absolute;
+    z-index: 90;
+    width: 512px;
+    height: 512px;
+    overflow: hidden;
+}
+
+.stargate .ring {
+    width: 512px;
+    height: 512px;
+    background: url("../../assets/images/ring.png");
+    transition-duration: 2s;
+    transition-property: transform;
+}
+
+.stargate .lock-container {
+    position: absolute;
+    z-index: 91;
+    width: 512px;
+    height: 512px;
+}
+
+.stargate .lock {
+    position: absolute;
+    width: 159px;
+    height: 58px;
+}
+
+.stargate .lock1 {
+    left: 172px;
+    top: -15px;
+    transform: rotate(0deg);
+}
+
+.stargate .lock2 {
+    left: 1px;
+    top: 60px;
+    transform: rotate(-46deg);
+}
+
+.stargate .lock3 {
+    left: 350px;
+    top: 60px;
+    transform: rotate(46deg);
+}
+
+.stargate .lock4 {
+    left: -65px;
+    top: 225px;
+    transform: rotate(-90deg);
+}
+
+.stargate .lock5 {
+    left: 416px;
+    top: 225px;
+    transform: rotate(90deg);
+}
+
+.stargate .lock6 {
+    left: -3px;
+    top: 387px;
+    transform: rotate(-132deg);
+}
+
+.stargate .lock7 {
+    left: 354px;
+    top: 387px;
+    transform: rotate(132deg);
+}
+
+.stargate .lock {
+    position: absolute;
+}
+
+.stargate .lock .center-on {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 165px;
+    height: 64px;
+    background: url("../../assets/images/lock_center_on.png");
+    opacity: 0;
+}
+
+.stargate .lock .center-off {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 165px;
+    height: 64px;
+    background: url("../../assets/images/lock_center_off.png");
+}
+
+.stargate .lock .base-on {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 165px;
+    height: 64px;
+    background: url("../../assets/images/lock_base_on.png");
+    opacity: 0;
+}
+
+.stargate .lock .base-off {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 165px;
+    height: 64px;
+    background: url("../../assets/images/lock_base_off.png");
+}

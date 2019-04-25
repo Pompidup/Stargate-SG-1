@@ -12,7 +12,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OnlyquizComponent } from './onlyquiz/onlyquiz.component';
 import { NasaService } from './nasa.service';
 import { PictureViewerComponent } from './picture-viewer/picture-viewer.component';
-import { SubscribeComponent } from './subscribe/subscribe.component'
+import { SubscribeComponent } from './subscribe/subscribe.component';
+import { DialComponent } from './dial/dial.component';
+import { SGCComponent } from './sgc/sgc.component';
+import { GateComponent } from './gate/gate.component';
+import { WaterComponent } from './water/water.component';
+import { WormHoleComponent } from './worm-hole/worm-hole.component'
  
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import { SubscribeComponent } from './subscribe/subscribe.component'
     OnlyquizComponent,
     PictureViewerComponent,
     SubscribeComponent,
+    DialComponent,
+    SGCComponent,
+    GateComponent,
+    WaterComponent,
+    WormHoleComponent,
   ],
   imports: [
     FormsModule,
