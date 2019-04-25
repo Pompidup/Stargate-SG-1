@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <div class="row col-12 ">
-    <div class="col-md-2 offset-md-1">
-      <img src="../../assets/images/logoTitle.png" style="width:100%">
+  <div class="row  ">
+    <div class=" col-4 col-sm-3 col-lg-2">
+      <img src="../../assets/images/logo.png" style="width:100%">
     </div>
 
 
@@ -14,7 +14,7 @@
     </div>
     <!--api nasa sur une planete en particulière-->
 
-    <table class="table">
+    <table class="table ">
       <tbody>
         <tr>
           <th scope="row"></th>
@@ -28,12 +28,13 @@
         </tr>
       </tbody>
     </table>
+
     <div>
       <div style="text-align:center">
         <p>{{firstQuest[0].description}}</p>
       </div>
     </div>
-    <div class="container buttons">
+    <div class="container buttons mt-5">
       <div class="row  ">
         <button type="button" class="col-3 col-md-4 btn btn-light"> <a [routerLink]="['../quiz']">Quizz</a></button>
         <div class="col-4"></div>

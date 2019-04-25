@@ -9,9 +9,11 @@ import { HightscoreComponent } from './hightscore/hightscore.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestComponent } from './quest/quest.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { OnlyquizComponent } from './onlyquiz/onlyquiz.component';
+import {NasaService} from './nasa.service';
 import { PictureViewerComponent } from './picture-viewer/picture-viewer.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
-import { NasaService } from './nasa.service';
+ 
 
 @NgModule({
   declarations: [
@@ -21,9 +23,9 @@ import { NasaService } from './nasa.service';
     QuizComponent,
     QuestComponent,
     ContactUsComponent,
+    OnlyquizComponent,
     PictureViewerComponent,
-
-    SubscribeComponent
+    SubscribeComponent,
   ],
   imports: [
     FormsModule,

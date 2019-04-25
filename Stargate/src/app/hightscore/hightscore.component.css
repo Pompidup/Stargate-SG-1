@@ -1,31 +1,18 @@
-table{
 
-   
-
-    border-collapse:collapse;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.7rem;
-    white-space: nowrap;
-
-}
-
-td {
-  padding: 8px;
-}
 
 
 
 .premier{
     color:red;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
 }
 .deuxieme{
     color: orange;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
 }
 .troisieme{
-    color: yellow;
-    font-size: 0.8rem;
+    color: rgb(92, 247, 31);
+    font-size: 1.5rem;
 }
 .score{
     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
@@ -33,7 +20,7 @@ td {
         background-clip:text ;
         -webkit-text-fill-color: transparent;
         font-size: 2rem;
-        line-height: 2rem;
+        
 }
 .head{
     color: pink;
@@ -47,4 +34,17 @@ td {
     padding-bottom: 2%;
 
 
+  }
+  .blink_me {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {  
+    50% { opacity: 0; }
+  }
+  td{
+      border: transparent
+  }
+  table{
+      border: solid transparent
   }
