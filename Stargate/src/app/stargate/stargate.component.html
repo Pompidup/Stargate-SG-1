@@ -1,9 +1,10 @@
-<div class="row justify-content-around">
-  <div class="col-md-4">
+<div class="row">
+  <div class="col-4">
     <img class="img-responsive" src="../../assets/images/logoTitle.png" style="width:100%">
   </div>
-  <div class="col-md-4">
+  <div class="col-4 offset-4">
     <app-hightscore></app-hightscore>
+    <app-subscribe></app-subscribe>
   </div>
 </div>
 <div class="row">
@@ -18,4 +19,8 @@
   <div class="offset-md-9">
     <a [routerLink]="['../contact-us']">Contact Us</a>
   </div>
+  <div>
+    <a [routerLink]="['../picture-viewer']">Picture viewer</a>
+  </div>
 </div>
+

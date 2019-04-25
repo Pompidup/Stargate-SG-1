@@ -10,6 +10,9 @@ export class StargateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
   }
 
 }
+

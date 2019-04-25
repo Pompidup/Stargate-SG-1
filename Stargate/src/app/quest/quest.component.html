@@ -1,47 +1,40 @@
-<body>
-  <div class="row">
+<div class="container-fluid">
+  <div class="row col-12 ">
     <div class="col-md-2 offset-md-1">
-      <img class="img-responsive" src="../../assets/images/logo.png" style="width:100%">
+      <img src="../../assets/images/logoTitle.png" style="width:100%">
     </div>
-  </div>
 
-  <div>
-    <div class="container">
-      <img class="image" class="offset-col-7 col-5" src="../../assets/images/terre_title2.jpg"
-        class="rounded mx-auto d-block" alt="images"></div>
+
+
+
+    <div>
+
+      <img class=" offset-2 col-8" src={{firstQuest[0].image}} alt="Responsive image">
+
+    </div>
     <!--api nasa sur une planete en particulière-->
-  </div>
-  <table class="table">
-    <tbody>
-      <tr>
-        <th scope="row"></th>
-        <td>-Une planète est un corps céleste orbitant autour du Soleil</td>
-        <td>-L'âge de la Terre est aujourd'hui estimé à 4,54 milliards d'années</td>
-      </tr>
-      <tr>
-        <th scope="row"></th>
-        <td>-Distance entre la Terre et le Soleil: 149 597 870 km.</td>
-        <td>-température de surface moyenne: 15°C</td>
-      </tr>
-    </tbody>
-  </table>
-  <div>
-    <div style="text-align:center">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptas
-        tenetur, eligendi quae aperiam rem atque, minima eum pariatur doloribus non.
-        Tempora id atque accusamus corrupti rem fugiat obcaecati similique.Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Dolore voluptas
-        tenetur, eligendi quae aperiam rem atque, minima eum pariatur doloribus non.
-        Tempora id atque accusamus corrupti rem fugiat obcaecati similique.Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Dolore voluptas
-        tenetur, eligendi quae aperiam rem atque, minima eum pariatur doloribus non.
-        Tempora id atque accusamus corrupti rem fugiat obcaecati similique.</p>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>-{{firstQuest[0].title}}</td>
+          <td>-{{firstQuest[0].title}}</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>-Distance entre la Terre et le Soleil: 149 597 870 km.</td>
+          <td>-température de surface moyenne: 15°C</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <div style="text-align:center">
+        <p>{{firstQuest[0].description}}</p>
+      </div>
     </div>
-  </div>
-
-  <div>
-    <button> <a [routerLink]="['../quiz']">Quiz</a></button>
-  </div>
-
-  <div><button> <a [routerLink]="['']">Home</a></button></div>
-</body>
+    <div class="container buttons">
+      <div class="row  ">
+        <button type="button" class="col-3 col-md-4 btn btn-light"> <a [routerLink]="['../quiz']">Quizz</a></button>
+        <div class="col-4"></div>
+        <button type="button" class="col-5 col-md-4 btn btn-light"> <a [routerLink]="['']">home</a></button>

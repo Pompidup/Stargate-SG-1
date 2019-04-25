@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StargateComponent } from './stargate/stargate.component';
@@ -21,11 +22,12 @@ import { OnlyquizComponent } from './onlyquiz/onlyquiz.component';
     OnlyquizComponent
   ],
   imports: [
-
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [NasaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

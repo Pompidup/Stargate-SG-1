@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { quest1 } from '../nasaConst';
+import { nasa } from '../nasaClassInfo';
+
 
 @Component({
   selector: 'app-quest',
@@ -7,8 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestComponent implements OnInit {
 
-  constructor() { }
+  public firstQuest: nasa[] = quest1;
 
+  constructor() {
+
+  }
   ngOnInit() {
   }
 
