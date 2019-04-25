@@ -12,40 +12,42 @@
 .colorbutton {
     
  
-    background-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8b8b8 50%, #fec837 75%, #fd1892 100%);
+    background-color: rgb(214, 13, 13) ;
     font-family: 'Press Start 2P', cursive;
-    font-size:0.6rem;
+    font-size:0.8rem;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    color: rgb(245, 218, 65); 
+    
 
 }
 .allbutton{
     
     
-    background-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    background-color: rgb(214, 13, 13) ;
     margin-top: 10%;
+   
     font-family: 'Press Start 2P', cursive;
-    font-size:0.6rem;
+    font-size:0.8rem;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    color: rgb(245, 218, 65); 
 
 }
 
 p{
     
-        background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
-        -webkit-background-clip: text;
-        background-clip:text ;
-        -webkit-text-fill-color: transparent;
+    color: rgb(245, 218, 65); 
         font-size: 1rem;
         line-height: 1rem;
       
 }
 .champ{
     font-size: 0.7rem;
-    color:red;
+    color:rgb(170, 68, 0);
 }
 .titre{
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
-    -webkit-background-clip: text;
-    background-clip:text ;
-    -webkit-text-fill-color: transparent;
+    color: rgb(245, 218, 65);
     font-size: 1rem;
     line-height: 1rem;
 }

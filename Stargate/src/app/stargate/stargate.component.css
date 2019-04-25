@@ -1,1 +1,5 @@
-
+marquee{
+    color: rgb(245, 218, 65); 
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.5rem;
+}
