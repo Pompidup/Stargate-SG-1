@@ -17,8 +17,8 @@ import { DialComponent } from './dial/dial.component';
 import { SGCComponent } from './sgc/sgc.component';
 import { GateComponent } from './gate/gate.component';
 import { WaterComponent } from './water/water.component';
-import { WormHoleComponent } from './worm-hole/worm-hole.component'
- 
+import { WormHoleComponent } from './worm-hole/worm-hole.component';
+
 @NgModule({
   declarations: [
     AppComponent,
