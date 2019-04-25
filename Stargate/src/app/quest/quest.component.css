@@ -1,13 +1,7 @@
-body{
-    background: url(../../assets/images/fond_accueil.jpg) center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+
 
 .table{
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     margin-top: 5%;
     color: white;
     border-bottom: 1px solid white;
@@ -17,3 +11,48 @@ p{
     color: white;
 }
 
+.allbutton{
+    
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 2%;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    
+    
+
+  }
+  
+  .allbutton span {
+    cursor: pointer;
+   
+    transition: 0.5s;
+  }
+  
+  .allbutton span:after {
+    content: '\00bb';
+   
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .allbutton:hover span {
+    padding-right: 25px;
+  }
+  
+  .allbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+ 
+  table{
+    width: 100%
+  }
