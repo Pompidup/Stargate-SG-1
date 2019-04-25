@@ -8,16 +8,37 @@
 </head>
 
 <body>
-  <div>
-    <div>
-      <div class="logo d-flex justify-content-center mb-3 mt-3 ">
-        <img src="../../assets/images/logoTitle.png" class="img-fluid d-sm-none d-md-block" />
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <img src="../../assets/images/logoTitle.png"
+          class="logo mb-1 pt-1 col-12 offset-sm-3 col-sm-7 mb-sm-2 d-lg-none" alt="logo" />
       </div>
-
-      <div class="quiz d-flex justify-content-center mb-5 ">
-        <img src="../../assets/images/imgQuiz.jpg" class="rounded-pill img-fluid-md" />
+      <div class="col-12">
+        <img src="../../assets/images/logo.png" class="logo col-lg-2 d-none d-sm-none d-lg-block mt-3" alt="logo" />
       </div>
+      <div class="col-12 d-inline-block">
 
+          <img src="../../assets/images/imgQuiz.jpg"
+            class="rounded-circle offset-1 col-10  col-lg-5 mb-sm-2 d-inline-block align-middle"
+            alt="imageAPI" />
+          <app-onlyquiz class="col-lg-5 d-inline-block align-middle"></app-onlyquiz>
+
+        </div>
+
+        <div class="col-12 mt-5">
+          <button type="button" class="col-3 btn btn-light" [routerLink]="['']">Home</button>
+          <button type="button" class="offset-6 col-3 btn btn-success"><a
+              [routerLink]="['../quest']">Finish</a></button>
+        </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
+
+          <!-- Quiz brute
       <div class="blockQuestion bg-light pt-3 rounded border border-warning">
         <div class="quiz d-flex justify-content-center mb-4 ">
           <h2 class=""><span class="firstQuestion">Voici la première question</span> ?</h2>
@@ -38,17 +59,4 @@
           </p>
         </div>
       </div>
-
-      <div class="container buttons">
-        <div class="row ml-0 mr-0 ">
-          <button type="button" class="col-4 btn btn-light" ><a [routerLink]="['']">Home</a></button>
-          <div class="col-4"></div>
-          <button type="button" class="col-4 btn btn-success"><a [routerLink]="['../quiz']">Finish</a></button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</body>
-
-</html>
+    -->

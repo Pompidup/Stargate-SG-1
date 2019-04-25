@@ -8,6 +8,7 @@ import { HightscoreComponent } from './hightscore/hightscore.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestComponent } from './quest/quest.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { OnlyquizComponent } from './onlyquiz/onlyquiz.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HightscoreComponent,
     QuizComponent,
     QuestComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    OnlyquizComponent
   ],
   imports: [
 
