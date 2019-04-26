@@ -37,10 +37,12 @@ export class NasaService {
           const tmp:nasa = new nasa();
           tmp.description = current.data[0].description;
           tmp.image = current.links[0].href;
-          tmp.title = current.data[0].nasa_id;
+          tmp.idNasa = current.data[0].nasa_id;
+          tmp.idMission = current.data[0].secondary_creator;
+          tmp.title = current.data[0].title;
           quest1.push(tmp);
-       //   console.log("contenu de quest1 dans le service");
-       //   console.log(quest1);
+          console.log("contenu de quest1 dans le service");
+          console.log(quest1);
         }
       }
       return quest1;

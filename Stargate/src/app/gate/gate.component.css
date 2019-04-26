@@ -101,43 +101,46 @@
 }
 
 .stargate .lock .center-on {
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 165px;
-    height: 64px;
-    background: url("../../assets/images/lock_center_on.png");
-    opacity: 0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 165px;
+  height: 64px;
+  background: url("../../assets/images/lock_center_on.png");
+  opacity: 0;
 }
 
 .stargate .lock .center-off {
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 165px;
-    height: 64px;
-    background: url("../../assets/images/lock_center_off.png");
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 165px;
+  height: 64px;
+  background: url("../../assets/images/lock_center_off.png");
 }
 
 .stargate .lock .base-on {
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 165px;
-    height: 64px;
-    background: url("../../assets/images/lock_base_on.png");
-    opacity: 0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 165px;
+  height: 64px;
+  background: url("../../assets/images/lock_base_on.png");
+  opacity: 0;
+
+
+
 }
 
 .stargate .lock .base-off {
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 165px;
-    height: 64px;
-    background: url("../../assets/images/lock_base_off.png");
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 165px;
+  height: 64px;
+  background: url("../../assets/images/lock_base_off.png");
 }
