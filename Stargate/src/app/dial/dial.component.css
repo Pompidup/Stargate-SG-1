@@ -114,24 +114,24 @@
  .dhd .btn9:hover, .dhd .btn9.active {background: url("../../assets/images/dc09.png");}
  .dhd .btn10:hover, .dhd .btn10.active {background: url("../../assets/images/dc10.png");}
  .dhd .btn11:hover, .dhd .btn11.active {background: url("../../assets/images/dc11.png");}
- .dhd .btn12:hover {background: url("../../assets/images/dc12.png");}
- .dhd .btn13:hover {background: url("../../assets/images/dc13.png");}
- .dhd .btn14:hover {background: url("../../assets/images/dc14.png");}
- .dhd .btn15:hover {background: url("../../assets/images/dc15.png");}
- .dhd .btn16:hover {background: url("../../assets/images/dc16.png");}
- .dhd .btn17:hover {background: url("../../assets/images/dc17.png");}
- .dhd .btn18:hover {background: url("../../assets/images/dc18.png");}
- .dhd .btn19:hover {background: url("../../assets/images/dc19.png");}
- .dhd .btn20:hover {background: url("../../assets/images/dc20.png");}
- .dhd .btn21:hover {background: url("../../assets/images/dc21.png");}
- .dhd .btn22:hover {background: url("../../assets/images/dc22.png");}
- .dhd .btn23:hover {background: url("../../assets/images/dc23.png");}
- .dhd .btn24:hover {background: url("../../assets/images/dc24.png");}
- .dhd .btn25:hover {background: url("../../assets/images/dc25.png");}
- .dhd .btn26:hover {background: url("../../assets/images/dc26.png");}
- .dhd .btn27:hover {background: url("../../assets/images/dc27.png");}
- .dhd .btn28:hover {background: url("../../assets/images/dc28.png");}
- .dhd .btn29:hover {background: url("../../assets/images/dc29.png");}
- .dhd .btn30:hover {background: url("../../assets/images/dc30.png");}
- .dhd .btn31:hover { background: url("../../assets/images/dc31.png"); }
- .dhd .btn32:hover { background: url("../../assets/images/dc32.png"); }
+ .dhd .btn12:hover, .dhd .btn12.active {background: url("../../assets/images/dc12.png");}
+ .dhd .btn13:hover, .dhd .btn13.active {background: url("../../assets/images/dc13.png");}
+ .dhd .btn14:hover, .dhd .btn14.active {background: url("../../assets/images/dc14.png");}
+ .dhd .btn15:hover, .dhd .btn15.active {background: url("../../assets/images/dc15.png");}
+ .dhd .btn16:hover, .dhd .btn16.active {background: url("../../assets/images/dc16.png");}
+ .dhd .btn17:hover, .dhd .btn17.active {background: url("../../assets/images/dc17.png");}
+ .dhd .btn18:hover, .dhd .btn18.active {background: url("../../assets/images/dc18.png");}
+ .dhd .btn19:hover, .dhd .btn19.active {background: url("../../assets/images/dc19.png");}
+ .dhd .btn20:hover, .dhd .btn20.active {background: url("../../assets/images/dc20.png");}
+ .dhd .btn21:hover, .dhd .btn21.active {background: url("../../assets/images/dc21.png");}
+ .dhd .btn22:hover, .dhd .btn22.active {background: url("../../assets/images/dc22.png");}
+ .dhd .btn23:hover, .dhd .btn23.active {background: url("../../assets/images/dc23.png");}
+ .dhd .btn24:hover, .dhd .btn24.active {background: url("../../assets/images/dc24.png");}
+ .dhd .btn25:hover, .dhd .btn25.active {background: url("../../assets/images/dc25.png");}
+ .dhd .btn26:hover, .dhd .btn26.active {background: url("../../assets/images/dc26.png");}
+ .dhd .btn27:hover, .dhd .btn27.active {background: url("../../assets/images/dc27.png");}
+ .dhd .btn28:hover, .dhd .btn28.active {background: url("../../assets/images/dc28.png");}
+ .dhd .btn29:hover, .dhd .btn29.active {background: url("../../assets/images/dc29.png");}
+ .dhd .btn30:hover, .dhd .btn30.active{background: url("../../assets/images/dc30.png");}
+ .dhd .btn31:hover, .dhd .btn31.active { background: url("../../assets/images/dc31.png");}
+ .dhd .btn32:hover, .dhd .btn32.active { background: url("../../assets/images/dc32.png");}
