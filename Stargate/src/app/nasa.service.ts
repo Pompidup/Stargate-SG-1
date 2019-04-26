@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { nasa } from './nasaClassInfo';
 import { quest1 } from './nasaConst';
+import { quest } from './nasaConst';
 
 
 
@@ -34,19 +35,27 @@ export class NasaService {
         current = items[i];
 
         if (current !== 0) {
-          const tmp:nasa = new nasa();
+          const tmp: nasa = new nasa();
           tmp.description = current.data[0].description;
           tmp.image = current.links[0].href;
           tmp.idNasa = current.data[0].nasa_id;
           tmp.idMission = current.data[0].secondary_creator;
           tmp.title = current.data[0].title;
-          quest1.push(tmp);
-          console.log("contenu de quest1 dans le service");
-          console.log(quest1);
+          quest.push(tmp);
+          //  console.log("contenu de quest1 dans le service");
+         // console.log(quest);
+
         }
+      }
+      for (let i: number = 0; i < 6; i++) {
+        let tmp: number = Math.floor(Math.random() * Math.floor(quest.length));
+        quest1.push(quest[tmp]);
+        console.log(quest1);
       }
       return quest1;
     };
+
+
     return obs.pipe(map(treatment));
   }
 }

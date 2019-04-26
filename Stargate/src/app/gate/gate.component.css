@@ -15,7 +15,7 @@
     position: relative;
     z-index: 100;
     width: 512px;
-    
+
 }
 
 .stargate .gate {
@@ -64,7 +64,8 @@
 .water{
     position: absolute;
     width: 650px;
-    left: 676px;   
+    left: 676px; 
+    opacity: 0;  
 }
 .stargate .lock2 {
     left: 1px;
@@ -150,3 +151,4 @@
   height: 64px;
   background: url("../../assets/images/lock_base_off.png");
 }
+

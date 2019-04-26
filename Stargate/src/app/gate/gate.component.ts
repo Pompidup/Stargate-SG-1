@@ -26,16 +26,23 @@ export class GateComponent implements OnInit {
 
     let waterSound: HTMLAudioElement = new Audio("assets/sounds/water.mp3");
     let vortexSound: HTMLAudioElement = new Audio("assets/sounds/open.mp3");
+    let waterEffect: any = document.getElementsByClassName("water")[0];
     vortexSound.play();
     setTimeout(() => waterSound.play(), 4000);
-
+    setTimeout(() => waterEffect.style.opacity = '1', 800);
   }
+
+  //if (p_num >= 6){
+  //  waterEffect.style.opacity = '1';
+  //};
 
   private _spin(p_num: number): void {
 
     let rotationSound: HTMLAudioElement = new Audio("assets/sounds/rotate.mp3");
     let lockedSound: HTMLAudioElement = new Audio("assets/sounds/chevron_lock.mp3");
     let ring: any = document.getElementsByClassName("ring")[0];
+
+    // console.log(waterEffect);
     // let lock: any = document.getElementsByClassName("lock")[p_num];
     setTimeout(
       () => {
@@ -59,15 +66,10 @@ export class GateComponent implements OnInit {
         center_on.style.opacity = '1';
         //base_on.style.transition = 'transform 1s';
         base_on.style.transform = 'translateY(-10px)';
+        // waterEffect.style.opacity = '1';
         //base_on.style.transition = 'transition-delay: 0.5s';
         //base_on.style.transform = 'translateY(0px)';
-        // TweenMax.set(base_off, { opacity: 0 });
-        // TweenMax.set(base_on, { opacity: 1 });
-        // var t = new TimelineMax();
-        // t.add(TweenMax.to(center_off, 0.7, { y: -6 }));
-        // t.add(TweenMax.to(center_off, 0.2, { y: 0 }));
-        // t.add(TweenMax.to(center_on, 0.2, { y: 0, opacity: 1 }));
-
+        console.log(p_num);
 
         setTimeout(
           () => {
@@ -76,7 +78,9 @@ export class GateComponent implements OnInit {
             lockedSound.play();
           },
           2000
+
         )
+
       },
       p_num * 4000
     );
