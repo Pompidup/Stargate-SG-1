@@ -11,10 +11,16 @@ import { nasa } from '../nasaClassInfo';
 export class QuestComponent implements OnInit {
 
   public firstQuest: nasa[] = quest1;
+  public truncDescription: string = '';
 
-  constructor() {
+  getRandomNasa(param_apiObject){
 
   }
+
+  constructor() {
+    this.truncDescription = this.firstQuest[0].description.substring(10, 25);
+  }
+
   ngOnInit() {
   }
 
