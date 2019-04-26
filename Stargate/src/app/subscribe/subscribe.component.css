@@ -10,13 +10,12 @@
    
 }
 .colorbutton {
-    
+    position: absolute;
+    top:33%;
  
     background-color: rgb(214, 13, 13) ;
     font-family: 'Press Start 2P', cursive;
     font-size:0.8rem;
-    padding-bottom: 4%;
-    padding-top: 4%;
     color: rgb(245, 218, 65); 
     
 

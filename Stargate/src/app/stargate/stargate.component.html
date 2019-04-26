@@ -1,36 +1,22 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-4">
+    <div class="col-3">
       <img class="img-responsive" src="../../assets/images/logoTitle.png" style="width:100%">
     </div>
-
-    <app-hightscore class="offset-4"></app-hightscore>
-
-
-    <app-subscribe class="offset-8"></app-subscribe>
-
+    <app-hightscore class="offset-9"></app-hightscore>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
+  <app-gate class="offset-4"></app-gate>
+  <app-subscribe class="offset-10"></app-subscribe>
 
-
-
-
-  
-    <app-gate ></app-gate>
-  
-
-
-  <div class="offset-md-1">
-    <a [routerLink]="['../quest']">Quest</a>
+  <div class="positionButton col-12">
+    <button type="button" class="btn btn-light btn-lg col-1 ml-5" [routerLink]="['../quest']">QUEST</button>
+    <button type="button" class="btn btn-light btn-lg offset-9" [routerLink]="['../contact-us']">CONTACT US</button>
   </div>
-  <div class="offset-md-9">
-    <a [routerLink]="['../contact-us']">Contact Us</a>
-  </div>
+
+  <!--
   <div>
     <a [routerLink]="['../picture-viewer']">Picture viewer</a>
   </div>
   <a [routerLink]="['../subscribe']">subscribe</a>
+  -->
 </div>
