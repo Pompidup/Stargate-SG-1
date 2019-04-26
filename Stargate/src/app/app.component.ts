@@ -17,7 +17,7 @@ export class AppComponent {
   constructor(private myService: NasaService) {
     this.results = [];
 
-    this.myService.getNasaresults("venus").subscribe(
+    this.myService.getNasaresults("mars").subscribe(
       (param_nasa: nasa[]) => {
         this.results = param_nasa;
       //  console.log("contenu de results");
