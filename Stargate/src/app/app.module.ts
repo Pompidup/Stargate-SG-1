@@ -18,6 +18,7 @@ import { SGCComponent } from './sgc/sgc.component';
 import { GateComponent } from './gate/gate.component';
 import { WaterComponent } from './water/water.component';
 import { WormHoleComponent } from './worm-hole/worm-hole.component';
+import { FinalquizComponent } from './finalquiz/finalquiz.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { WormHoleComponent } from './worm-hole/worm-hole.component';
     GateComponent,
     WaterComponent,
     WormHoleComponent,
+    FinalquizComponent,
   ],
   imports: [
     FormsModule,
