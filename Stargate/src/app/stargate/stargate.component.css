@@ -5,3 +5,8 @@ app-hightscore {
 .positionButton {
     margin-top: 15%
 }
+
+.signIn {
+    position: absolute;
+    margin-top: 10%;
+}

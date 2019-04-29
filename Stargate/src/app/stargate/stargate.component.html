@@ -5,17 +5,12 @@
     </div>
     <app-hightscore class="offset-lg-9 mt-lg-3"></app-hightscore>
   </div>
-  <app-gate class="offset-lg-4"></app-gate>
-  <app-subscribe class="offset-lg-10"></app-subscribe>
-
+  <button type="button" class="btn btn-outline-secondary btn-lg text-white offset-10 col-1 signIn"
+    [routerLink]="['../subscribe']">SIGN
+    IN</button>
+  <app-gate class="offset-lg-10"></app-gate>
   <div class="positionButton col-12">
-    <button type="button" class="btn btn-light btn-lg" [routerLink]="['../contact-us']">CONTACT US</button>
+    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../contact-us']">CONTACT
+      US</button>
   </div>
-
-  <!--
-  <div>
-    <a [routerLink]="['../picture-viewer']">Picture viewer</a>
-  </div>
-  <a [routerLink]="['../subscribe']">subscribe</a>
-  -->
 </div>
