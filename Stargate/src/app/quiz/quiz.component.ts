@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {quest1} from '../nasaConst';
+import {nasa} from '../nasaClassInfo';
 
 @Component({
   selector: 'app-quiz',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+public firstQuest:nasa []=quest1;
 
   constructor() { }
 

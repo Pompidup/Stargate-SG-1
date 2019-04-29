@@ -1,22 +1,26 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3">
-      <img class="img-responsive" src="../../assets/images/logoTitle.png" style="width:100%">
+    <div class="">
+      <img class="img-responsive col-md-4 col-sm-8" src="../../assets/images/logoTitle.png">
     </div>
-    <app-hightscore class="offset-9"></app-hightscore>
-  </div>
-  <app-gate class="offset-4"></app-gate>
-  <app-subscribe class="offset-10"></app-subscribe>
+    <div class="col-md-5 ">
+      <app-hightscore class="col-md-8 "></app-hightscore>
+    </div>
+    <div class="col-md-4 col-sm-6 offset-md-2 offset-md-4">
+      <app-gate class=""></app-gate>
+    </div>
+    
+    <div class="positionButton">
+      <button type="button" class="btn btn-light btn-lg col-1 ml-5" [routerLink]="['../quest']">QUEST</button>
+      <button type="button" class="btn btn-light btn-lg offset-9" [routerLink]="['../contact-us']">CONTACT US</button>
+    </div>
+    
+    <button type="button" class="btn btn-light btn-lg col-1 ml-5" [routerLink]="['../subscribe']">subscribe</button>
 
-  <div class="positionButton col-12">
-    <button type="button" class="btn btn-light btn-lg col-1 ml-5" [routerLink]="['../quest']">QUEST</button>
-    <button type="button" class="btn btn-light btn-lg offset-9" [routerLink]="['../contact-us']">CONTACT US</button>
-  </div>
-
-  <!--
   <div>
     <a [routerLink]="['../picture-viewer']">Picture viewer</a>
   </div>
-  <a [routerLink]="['../subscribe']">subscribe</a>
-  -->
+  
+  
+  </div>
 </div>
