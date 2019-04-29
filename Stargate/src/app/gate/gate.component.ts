@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gate',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -28,13 +29,24 @@ export class GateComponent implements OnInit {
     let vortexSound: HTMLAudioElement = new Audio("assets/sounds/open.mp3");
     let waterEffect: any = document.getElementsByClassName("water")[0];
     vortexSound.play();
-    setTimeout(() => waterSound.play(), 4000);
-    setTimeout(() => waterEffect.style.opacity = '1', 800);
-  }
+    setTimeout(
+      () => {
+        waterEffect.style.opacity = '1';
+        waterSound.play();
+        setTimeout(
+          () => {
+            waterSound.pause();
+            this.router.navigate(['/', 'quest'])
+          },
+          7100
+        )
+        //setTimeout(() => this.router.navigate(['/', 'quest']), 3800, waterSound.pause(), waterSound.currentTime = 0);
+      },
+      1000
+    )
+  };
 
-  //if (p_num >= 6){
-  //  waterEffect.style.opacity = '1';
-  //};
+
 
   private _spin(p_num: number): void {
 
@@ -53,23 +65,34 @@ export class GateComponent implements OnInit {
         ring.setAttribute("class", "ring rotation" + (p_num + 1));
         // lock.setAttribute("class", "lock"+(p_num+1) + " lock base-on center-on");
 
-        let lock: any = document.getElementsByClassName("lock")[p_num];
-        console.log(lock);
-        let base_off: any = lock.getElementsByClassName("base-off")[0];
-        // console.log(base_off);
-        let base_on: any = lock.getElementsByClassName("base-on")[0];
-        let center_off: any = lock.getElementsByClassName("center-off")[0];
-        let center_on: any = lock.getElementsByClassName("center-on")[0];
-        base_off.style.opacity = '0';
-        base_on.style.opacity = '1';
-        center_off.style.opacity = '0';
-        center_on.style.opacity = '1';
+        setTimeout(
+          () => {
+            let lock: any = document.getElementsByClassName("lock")[p_num];
+            console.log(lock);
+            let base_off: any = lock.getElementsByClassName("base-off")[0];
+            // console.log(base_off);
+            let base_on: any = lock.getElementsByClassName("base-on")[0];
+            let center_off: any = lock.getElementsByClassName("center-off")[0];
+            let center_on: any = lock.getElementsByClassName("center-on")[0];
+
+            base_off.style.opacity = '0';
+            base_on.style.opacity = '1';
+            center_off.style.opacity = '0';
+            center_on.style.opacity = '1';
+            base_on.style.transform = 'translateY(-10px)';
+
+          },
+          3500
+        )
+
+
+
         //base_on.style.transition = 'transform 1s';
-        base_on.style.transform = 'translateY(-10px)';
+
         // waterEffect.style.opacity = '1';
         //base_on.style.transition = 'transition-delay: 0.5s';
         //base_on.style.transform = 'translateY(0px)';
-        console.log(p_num);
+        // console.log(p_num);
 
         setTimeout(
           () => {

@@ -19,7 +19,7 @@ export class AppComponent {
     for (let i: number = 0; i < 3; i++) {
       let planetForQuest: string = '';
       if (i == 0){
-        planetForQuest = "loup";
+        planetForQuest = "mars";
       }else if (i == 1){
         planetForQuest = "venus";
       }else {
