@@ -63,9 +63,11 @@
 
 .water{
     position: absolute;
-    width: 650px;
-    left: 676px; 
+    width: 500px;
+    left: 725px; 
     opacity: 0;  
+    border-radius: 70%;
+
 }
 .stargate .lock2 {
     left: 1px;
