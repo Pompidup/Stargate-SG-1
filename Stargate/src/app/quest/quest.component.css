@@ -1,14 +1,20 @@
-
-
-.table{
-    margin-bottom: 5%;
-    margin-top: 5%;
-    color: white;
-    border-bottom: 1px solid white;
-}
-
+ul{
+  color: white;
+    
+     padding:8px;
+      margin:12px;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+    .wrapper:after{
+      color: white;
+      display:block;
+       content:"";
+       clear:both;
+  }
 p{
     color: white;
+    text-align: center;
 }
 
 .allbutton{
@@ -23,9 +29,7 @@ p{
     width: 200px;
     transition: all 0.5s;
     cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
-    
-    
+    font-family: 'Press Start 2P', cursive; 
 
   }
   
@@ -52,7 +56,4 @@ p{
     opacity: 1;
     right: 0;
   }
- 
-  table{
-    width: 100%
-  }
+
