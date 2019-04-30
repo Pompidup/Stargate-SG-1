@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
-import { NasaService } from '../nasa.service';
+
+import { Component, OnInit } from '@angular/core';
+import { quest1 } from '../nasaConst';
+import { nasa } from '../nasaClassInfo';
+
 
 @Component({
   selector: 'app-picture-viewer',
   templateUrl: './picture-viewer.component.html',
   styleUrls: ['./picture-viewer.component.css']
 })
-export class PictureViewerComponent {
+export class PictureViewerComponent implements OnInit {
 
-  images:string[];
+  public firstQuest: nasa[] = quest1;
 
-  constructor(private myService:NasaService) {
-    this.images = [];
 
-    this.myService.getNasaImages("moon").subscribe(
-      (param_images:string[]) => {
-        this.images = param_images;
-      }
-    )
+    constructor() {
+
+
+     }
+
+    ngOnInit() {
+    }
+
   }
-
-}

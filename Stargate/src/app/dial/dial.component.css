@@ -1,0 +1,138 @@
+
+ .dhd {
+    z-index: 220;
+    position: relative;
+    width: 512px;
+}
+
+ .dhd .bg {
+    position: relative;
+    top: 380px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    background: url("../../assets/images/dhd_blank.png");
+}
+
+ .dhd .btn-start {
+    z-index: 505;
+    position: relative;
+    top: 173px;
+    width: 113px;
+    height: 113px;
+    margin: auto;
+    background: url("../../assets/images/dhd_btn_up.png");
+    cursor: pointer;
+}
+
+ .dhd .btn-start:hover {
+    background: url("../../assets/images/dhd_btn_down.png");
+}
+
+ .dhd .dhd-btn {
+    z-index: 103;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    position: absolute;
+}
+
+.dhd .btn1{left:199px;top:382px;width:57px;height:55px}
+.dhd .btn2{left:256px;top:382px;width:56px;height:55px}
+.dhd .btn3{left:295px;top:393px;width:66px;height:66px}
+.dhd .btn4{left:328px;top:426px;width:65px;height:66px}
+.dhd .btn5{left:350px;top:474px;width:55px;height:57px}
+.dhd .btn6{left:349px;top:530px;width:56px;height:60px}
+.dhd .btn7{left:328px;top:572px;width:64px;height:63px}
+.dhd .btn8{left:294px;top:603px;width:67px;height:66px}
+.dhd .btn9{left:256px;top:625px;width:55px;height:54px}
+.dhd .btn10{left:199px;top:624px;width:57px;height:55px}
+.dhd .btn11{left:151px;top:602px;width:65px;height:65px}
+.dhd .btn12{left:119px;top:570px;width:65px;height:65px}
+.dhd .btn13{left:107px;top:530px;width:55px;height:58px}
+.dhd .btn14{left:107px;top:471px;width:56px;height:59px}
+.dhd .btn15{left:119px;top:425px;width:65px;height:64px}
+.dhd .btn16{left:151px;top:393px;width:66px;height:66px}
+.dhd .btn17{left:220px;top:435px;width:36px;height:43px}
+.dhd .btn18{left:256px;top:435px;width:35px;height:43px}
+.dhd .btn19{left:277px;top:443px;width:46px;height:47px}
+.dhd .btn20{left:296px;top:464px;width:47px;height:44px}
+.dhd .btn21{left:308px;top:494px;width:43px;height:36px}
+.dhd .btn22{left:308px;top:530px;width:43px;height:38px}
+.dhd .btn23{left:297px;top:554px;width:45px;height:42px}
+.dhd .btn24{left:277px;top:571px;width:45px;height:47px}
+.dhd .btn25{left:256px;top:583px;width:34px;height:42px}
+.dhd .btn26{left:220px;top:583px;width:36px;height:42px}
+.dhd .btn27{left:190px;top:571px;width:44px;height:46px}
+.dhd .btn28{left:169px;top:552px;width:47px;height:45px}
+.dhd .btn29{left:161px;top:530px;width:43px;height:37px}
+.dhd .btn30{left:161px;top:493px;width:43px;height:37px}
+.dhd .btn31{left:170px;top:464px;width:46px;height:44px}
+.dhd .btn32{left:190px;top:443px;width:44px;height:47px}
+
+
+
+.dhd .btn1 {background: url("../../assets/images/uc01.png");}
+.dhd .btn2 {background: url("../../assets/images/uc02.png");}
+.dhd .btn3 {background: url("../../assets/images/uc03.png");}
+.dhd .btn4 {background: url("../../assets/images/uc04.png");}
+.dhd .btn5 {background: url("../../assets/images/uc05.png");}
+.dhd .btn6 {background: url("../../assets/images/uc06.png");}
+.dhd .btn7 {background: url("../../assets/images/uc07.png");}
+.dhd .btn8 {background: url("../../assets/images/uc08.png");}
+.dhd .btn9 {background: url("../../assets/images/uc09.png");}
+.dhd .btn10 {background: url("../../assets/images/uc10.png");}
+.dhd .btn11 {background: url("../../assets/images/uc11.png");}
+.dhd .btn12 {background: url("../../assets/images/uc12.png");}
+.dhd .btn13 {background: url("../../assets/images/uc13.png");}
+.dhd .btn14 {background: url("../../assets/images/uc14.png");}
+.dhd .btn15 {background: url("../../assets/images/uc15.png");}
+.dhd .btn16 {background: url("../../assets/images/uc16.png");}
+.dhd .btn17 {background: url("../../assets/images/uc17.png");}
+.dhd .btn18 {background: url("../../assets/images/uc18.png");}
+.dhd .btn19 {background: url("../../assets/images/uc19.png");}
+.dhd .btn20 {background: url("../../assets/images/uc20.png");}
+.dhd .btn21 {background: url("../../assets/images/uc21.png");}
+.dhd .btn22 {background: url("../../assets/images/uc22.png");}
+.dhd .btn23 {background: url("../../assets/images/uc23.png");}
+.dhd .btn24 {background: url("../../assets/images/uc24.png");}
+.dhd .btn25 {background: url("../../assets/images/uc25.png");}
+.dhd .btn26 {background: url("../../assets/images/uc26.png");}
+.dhd .btn27 {background: url("../../assets/images/uc27.png");}
+.dhd .btn28 {background: url("../../assets/images/uc28.png");}
+.dhd .btn29 {background: url("../../assets/images/uc29.png");}
+.dhd .btn30 {background: url("../../assets/images/uc30.png");}
+.dhd .btn31 { background: url("../../assets/images/uc31.png"); }
+.dhd .btn32 { background: url("../../assets/images/uc32.png"); }
+
+ .dhd .btn1:hover, .dhd .btn1.active {background: url("../../assets/images/dc01.png");}
+ .dhd .btn2:hover, .dhd .btn2.active  {background: url("../../assets/images/dc02.png");}
+ .dhd .btn3:hover, .dhd .btn3.active {background: url("../../assets/images/dc03.png");}
+ .dhd .btn4:hover, .dhd .btn4.active {background: url("../../assets/images/dc04.png");}
+ .dhd .btn5:hover, .dhd .btn5.active {background: url("../../assets/images/dc05.png");}
+ .dhd .btn6:hover, .dhd .btn6.active {background: url("../../assets/images/dc06.png");}
+ .dhd .btn7:hover, .dhd .btn7.active {background: url("../../assets/images/dc07.png");}
+ .dhd .btn8:hover, .dhd .btn8.active {background: url("../../assets/images/dc08.png");}
+ .dhd .btn9:hover, .dhd .btn9.active {background: url("../../assets/images/dc09.png");}
+ .dhd .btn10:hover, .dhd .btn10.active {background: url("../../assets/images/dc10.png");}
+ .dhd .btn11:hover, .dhd .btn11.active {background: url("../../assets/images/dc11.png");}
+ .dhd .btn12:hover, .dhd .btn12.active {background: url("../../assets/images/dc12.png");}
+ .dhd .btn13:hover, .dhd .btn13.active {background: url("../../assets/images/dc13.png");}
+ .dhd .btn14:hover, .dhd .btn14.active {background: url("../../assets/images/dc14.png");}
+ .dhd .btn15:hover, .dhd .btn15.active {background: url("../../assets/images/dc15.png");}
+ .dhd .btn16:hover, .dhd .btn16.active {background: url("../../assets/images/dc16.png");}
+ .dhd .btn17:hover, .dhd .btn17.active {background: url("../../assets/images/dc17.png");}
+ .dhd .btn18:hover, .dhd .btn18.active {background: url("../../assets/images/dc18.png");}
+ .dhd .btn19:hover, .dhd .btn19.active {background: url("../../assets/images/dc19.png");}
+ .dhd .btn20:hover, .dhd .btn20.active {background: url("../../assets/images/dc20.png");}
+ .dhd .btn21:hover, .dhd .btn21.active {background: url("../../assets/images/dc21.png");}
+ .dhd .btn22:hover, .dhd .btn22.active {background: url("../../assets/images/dc22.png");}
+ .dhd .btn23:hover, .dhd .btn23.active {background: url("../../assets/images/dc23.png");}
+ .dhd .btn24:hover, .dhd .btn24.active {background: url("../../assets/images/dc24.png");}
+ .dhd .btn25:hover, .dhd .btn25.active {background: url("../../assets/images/dc25.png");}
+ .dhd .btn26:hover, .dhd .btn26.active {background: url("../../assets/images/dc26.png");}
+ .dhd .btn27:hover, .dhd .btn27.active {background: url("../../assets/images/dc27.png");}
+ .dhd .btn28:hover, .dhd .btn28.active {background: url("../../assets/images/dc28.png");}
+ .dhd .btn29:hover, .dhd .btn29.active {background: url("../../assets/images/dc29.png");}
+ .dhd .btn30:hover, .dhd .btn30.active{background: url("../../assets/images/dc30.png");}
+ .dhd .btn31:hover, .dhd .btn31.active { background: url("../../assets/images/dc31.png");}
+ .dhd .btn32:hover, .dhd .btn32.active { background: url("../../assets/images/dc32.png");}

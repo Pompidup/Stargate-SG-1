@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { quest1, quest2, quest3 } from '../nasaConst';
 
 @Component({
   selector: 'app-stargate',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StargateComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log(quest1);
+    console.log(quest2);
+    console.log(quest3);
+   }
 
   ngOnInit() {
 

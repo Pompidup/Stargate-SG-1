@@ -1,56 +1,31 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <meta charset="utf-8">
-  <title>QuizPage</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{answerQ1[0]}}
 
-</head>
+<form #quizForm="ngForm">
+    <table>
+      <tr>
+        <td>Q1 {{q1}}</td>
+        <td>
+          <input type="radio" value="0" name="rep1" [ngModel]="quiz.rep1" #rep1="ngModel"> qkjshfpishfpiuhfi
+          <input type="radio" value="0" name="rep1" [ngModel]="quiz.rep1" #rep1="ngModel"> mkfoi oizefj ozjef
+          <input type="radio" value="1" name="rep1" [ngModel]="quiz.rep1" #rep1="ngModel"> {{ answerQ1[0] }}
+          <input type="radio" value="0" name="rep1" [ngModel]="quiz.rep1" #rep1="ngModel"> jhzf FEOIUH OU
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button>Submit</button>
+          <button type="button" (click)="setDefaultValues()">Set Default</button>
+        </td>
+      </tr>
+    </table>
+  </form>
 
-<body>
-  <div>
-    <div>
-      <div class="logo d-flex justify-content-center mb-3 mt-3 ">
-        <img src="../../assets/images/logoTitle.png" class="img-fluid d-sm-none d-md-block" />
-      </div>
-
-      <div class="quiz d-flex justify-content-center mb-5 ">
-        <img src="../../assets/images/imgQuiz.jpg" class="rounded-pill img-fluid-md" />
-      </div>
-
-      <div class="blockQuestion bg-light pt-3 rounded border border-warning">
-        <div class="quiz d-flex justify-content-center mb-4 ">
-          <h2 class=""><span class="firstQuestion">Voici la première question</span> ?</h2>
-        </div>
-
-        <div class="answers pb-2">
-          <p class="d-flex justify-content-center"> <img src="../../assets/images/checkBox.png" /> &nbsp; &nbsp; Réponse
-            1
-          </p>
-          <p class="d-flex justify-content-center"> <img src="../../assets/images/checkBox.png" /> &nbsp; &nbsp; Réponse
-            2
-          </p>
-          <p class="d-flex justify-content-center"> <img src="../../assets/images/checkBox.png" /> &nbsp; &nbsp; Réponse
-            3
-          </p>
-          <p class="d-flex justify-content-center"> <img src="../../assets/images/checkBox.png" /> &nbsp; &nbsp; Réponse
-            4
-          </p>
-        </div>
-      </div>
-
-      <div class="container buttons">
-        <div class="row ml-0 mr-0 ">
-          <button type="button" class="col-4 btn btn-light" ><a [routerLink]="['']">Home</a></button>
-          <div class="col-4"></div>
-          <button type="button" class="col-4 btn btn-success"><a [routerLink]="['../quiz']">Finish</a></button>
-        </div>
-      </div>
-
-
+  <div class="form-group">
+      <label for="inputEmail">Email</label>
+      <input type="text"
+        [(ngModel)] = "user.email"
+        id="inputEmail"
+        name="email"
+        placeholder="Email">
     </div>
-  </div>
-</body>
-
-</html>

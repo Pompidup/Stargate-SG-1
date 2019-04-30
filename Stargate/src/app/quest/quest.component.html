@@ -1,47 +1,46 @@
+<div class="container-fluid">
+  <div class="row  ">
+    <div class=" col-4 col-sm-3 col-lg-2">
+      <img src="../../assets/images/logo.png" style="width:100%">
+    </div>
+  
 
+
+
+
+  <div>
+
+    <img class="apimg" class="offset-5 col-7" src={{firstQuest[0].image}} alt="Responsive image">
+
+  </div>
+  </div>
+  <!--api nasa sur une planete en particulière-->
+
+  <!--<div class="container col-5">-->
   <div class="row">
-    <div class="col-md-2 offset-md-1">
-      <img class="img-responsive" src="../../assets/images/logo.png" style="width:100%">
+    <div class="offset-2 col-4">
+      <ul>
+        <li>Title of the picture : {{firstQuest[0].title}}</li>
+        <li>Some information blablabla : {{truncDescription}}</li>
+      </ul>
+    </div>
+    <div class="col-4">
+      <ul>
+        <li>Nasa internal identification : {{firstQuest[0].idNasa}}</li>
+        <li>Stargate secret identification : {{firstQuest[0].idMission}}</li>
+      </ul>
     </div>
   </div>
+</div>
 
-  <div>
-    <div class="container">
-      <img class="image" class="offset-col-7 col-5" src="../../assets/images/terre_title2.jpg"
-        class="rounded mx-auto d-block" alt="images"></div>
-    <!--api nasa sur une planete en particulière-->
+<div class="offset-xs-2 col-xs-4">
+  <!--<div class="offset-2 col-md-8 col-xs-4">-->
+  <div style="text-align:center">
+    <p>{{firstQuest[0].description}}</p>
   </div>
-  <table class="table">
-    <tbody>
-      <tr>
-        <th scope="row"></th>
-        <td>-Une planète est un corps céleste orbitant autour du Soleil</td>
-        <td>-L'âge de la Terre est aujourd'hui estimé à 4,54 milliards d'années</td>
-      </tr>
-      <tr>
-        <th scope="row"></th>
-        <td>-Distance entre la Terre et le Soleil: 149 597 870 km.</td>
-        <td>-température de surface moyenne: 15°C</td>
-      </tr>
-    </tbody>
-  </table>
-  <div>
-    <div style="text-align:center">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptas
-        tenetur, eligendi quae aperiam rem atque, minima eum pariatur doloribus non.
-        Tempora id atque accusamus corrupti rem fugiat obcaecati similique.Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Dolore voluptas
-        tenetur, eligendi quae aperiam rem atque, minima eum pariatur doloribus non.
-        Tempora id atque accusamus corrupti rem fugiat obcaecati similique.Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Dolore voluptas
-        tenetur, eligendi quae aperiam rem atque, minima eum pariatur doloribus non.
-        Tempora id atque accusamus corrupti rem fugiat obcaecati similique.</p>
-    </div>
-  </div>
-
-  <div>
-    <button> <a [routerLink]="['../quiz']">Quiz</a></button>
-  </div>
-
-  <div><button> <a [routerLink]="['']">Home</a></button></div>
-
+</div>
+<div class="container buttons mt-5">
+  <div class="row  ">
+    <button type="button" class="col-3 col-md-4 btn btn-light" [routerLink]="['../quiz']">Quizz</button>
+    <div class="col-4"></div>
+    <button type="button" class="col-5 col-md-4 btn btn-light" [routerLink]="['']">home</button>

@@ -1,0 +1,17 @@
+.row img {
+    height: 100%;
+}
+
+.textInfo {
+    font-size: 0.9rem
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        padding-top: 8vh
+    }
+
+    .row img {
+        height: auto;
+    }
+}
