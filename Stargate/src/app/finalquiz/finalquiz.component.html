@@ -8,13 +8,13 @@
         </div>
         <div class="row">
             <div class="form-check col">
-              <input class="form-check-input col-6" type="checkbox" id="q1r1" [(ngModel)]="answerQ1[0]" name="q1r1">
-              <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+              <input class="form-check-input col-6" (change)="check($event)" type="checkbox" id="q1r1">
+              <label class="form-check-label d-flex justify-content-center"  for="gridCheck">
                 {{answerQ1[0]}}
               </label>
             </div>
             <div class="form-check col">
-              <input class="form-check-input col-6" type="checkbox" id="gridCheck">
+              <input class="form-check-input col-6"  type="checkbox" id="gridCheck">
               <label class="form-check-label d-flex justify-content-center" for="gridCheck">
                   {{answerQ1[1]}}
               </label>
@@ -48,7 +48,7 @@
                 </label>
               </div>
               <div class="form-check col mb-3">
-                <input class="form-check-input col-6" type="checkbox" id="gridCheck">
+                <input class="form-check-input col-6" (change)="check($event)" type="checkbox" id="gridCheck">
                 <label class="form-check-label d-flex justify-content-center" for="gridCheck">
                   {{answerQ2[2]}}
                 </label>
@@ -70,7 +70,7 @@
                   </label>
                 </div>
                 <div class="form-check col">
-                  <input class="form-check-input col-6" type="checkbox" id="gridCheck">
+                  <input class="form-check-input col-6" (change)="check($event)" type="checkbox" id="gridCheck">
                   <label class="form-check-label d-flex justify-content-center" for="gridCheck">
                     {{answerQ3[1]}}
                   </label>
@@ -84,5 +84,10 @@
             </div>
           </div>
         </div>
+  </div>
+  <div class="col-12 mt-5">
+    <button type="button" (click) = "updatescore()" class="offset-5 col-4 btn btn-outline-secondary btn-lg text-white" [routerLink]="['..']">
+      MISSION CLEAR
+    </button>
   </div>
 </form>

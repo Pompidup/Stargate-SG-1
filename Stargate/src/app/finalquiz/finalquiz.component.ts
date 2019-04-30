@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { quest1 } from '../nasaConst';
 import { nasa } from '../nasaClassInfo';
 import { NgForm } from '@angular/forms';
+import { player3 } from '../scorePlayer';
 
 @Component({
   selector: 'app-finalquiz',
@@ -11,21 +12,20 @@ import { NgForm } from '@angular/forms';
 export class FinalquizComponent implements OnInit {
 
   public firstQuest: nasa[] = quest1;
+  public tmpScore:number = 0;
+
   public q1: string = "Title of picture ?";
   public answerQ1: string[] = [
     this.firstQuest[0].title,
     "title1",
     "title2",
-    "title3",
   ];
-
 
   public q2: string = "Nasa Identification ?"
   public answerQ2: string[] = [
     "00110100111010",
     "La réponse est idNasa",
     this.firstQuest[0].idNasa,
-    "Yorann",
   ];
   public q3: string = "Stargate secret Identification ?"
   public answerQ3: string[] = [
@@ -34,14 +34,22 @@ export class FinalquizComponent implements OnInit {
     "Bonjour demandez mot ?",
   ];
 
-  onFormSubmit(form: NgForm) {
+  check(e){
+    this.tmpScore
+    if (e.target.checked){this.tmpScore += 100; console.log(this.tmpScore)};
+  }
+  updatescore(){
+    player3.score = this.tmpScore;
+    console.log(player3)
   }
 
+
   constructor() {
-    console.log(this.answerQ1[1])
+
   }
 
   ngOnInit() {
+
 
 
   }
