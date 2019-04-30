@@ -19,7 +19,7 @@ export const player2:score = {
 
 export const player3:score = {
   id:3,
-  name: "Bx",
-  score: -150
+  name: "Tester",
+  score: 0
 };
 
