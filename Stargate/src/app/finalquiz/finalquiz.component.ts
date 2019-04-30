@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { quest1 } from '../nasaConst';
+import { quest1, quest2, quest3 } from '../nasaConst';
 import { nasa } from '../nasaClassInfo';
 import { NgForm } from '@angular/forms';
 import { player3 } from '../scorePlayer';
@@ -12,7 +12,22 @@ import { player3 } from '../scorePlayer';
 export class FinalquizComponent implements OnInit {
 
   public firstQuest: nasa[] = quest1;
-  public tmpScore:number = 0;
+
+  choosenQuest() {
+    if (player3.questProgress === 1) {
+      this.firstQuest = quest1
+      console.log(" 1ST")
+    } else if (player3.questProgress === 2) {
+      this.firstQuest = quest2
+      console.log(" 2ND")
+    } else {
+      this.firstQuest = quest3
+      console.log("3rd")
+    }
+  }
+
+
+  public tmpScore: number = 0;
 
   public q1: string = "Title of picture ?";
   public answerQ1: string[] = [
@@ -34,12 +49,13 @@ export class FinalquizComponent implements OnInit {
     "Bonjour demandez mot ?",
   ];
 
-  check(e){
+  check(e) {
     this.tmpScore
-    if (e.target.checked){this.tmpScore += 100; console.log(this.tmpScore)};
+    if (e.target.checked) { this.tmpScore += 100; console.log(this.tmpScore) };
   }
-  updatescore(){
-    player3.score = this.tmpScore;
+  updatescore() {
+    player3.score += this.tmpScore;
+    player3.questProgress++;
     console.log(player3)
   }
 
@@ -49,6 +65,7 @@ export class FinalquizComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.choosenQuest()
 
 
 
