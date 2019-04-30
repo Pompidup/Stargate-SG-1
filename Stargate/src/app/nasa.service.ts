@@ -49,7 +49,7 @@ export class NasaService {
         }
       }
       for (let j: number = 0; j < 6; j++) {
-        console.log(j)
+        // console.log(j)
         let tmp: number = Math.floor(Math.random() * Math.floor(quest.length));
 
         if (param_quest == 0) {
