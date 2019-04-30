@@ -12,16 +12,13 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
-        <img src="../../assets/images/logoTitle.png"
-          class="logo mb-1 pt-1 col-12 offset-sm-3 col-sm-7 mb-sm-2 d-lg-none" alt="logo" />
-      </div>
-      <div class="col-12">
-        <img src="../../assets/images/logo.png" class="logo col-lg-2 d-none d-sm-none d-lg-block mt-3" alt="logo" />
+        <img src="../../assets/images/logoTitle.png" [routerLink]="['']"
+          class="logo mb-1 pt-1 col-12 offset-sm-3 col-sm-7 mb-sm-2 d-lg-none" alt="logo"/>
       </div>
       <div class="col-12 d-inline-block">
 
           <img src={{firstQuest[0].image}}
-            class="rounded-circle offset-1 col-10  col-lg-5 mb-sm-2 d-inline-block align-middle"
+            class="w-50 rounded offset-1 col-10  col-lg-5 mb-sm-2 d-inline-block align-middle mt-5"
             alt="imageAPI" />
 
           <app-finalquiz class="col-lg-5 d-inline-block align-middle"></app-finalquiz>
@@ -30,9 +27,9 @@
         </div>
 
         <div class="col-12 mt-5">
-          <button type="button" class="col-3 btn btn-light" [routerLink]="['']">Home</button>
-          <button type="button" class="offset-6 col-3 btn btn-success"><a
-              [routerLink]="['../quest']">Finish</a></button>
+          <button type="button" class="offset-5 col-2 btn btn-outline-secondary btn-lg text-white" [routerLink]="['../quest']">
+            MISSION CLEAR
+          </button>
         </div>
 
 
