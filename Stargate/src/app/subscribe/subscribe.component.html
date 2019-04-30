@@ -1,23 +1,23 @@
-<button class="colorbutton" (click)="toggle()" id="bt">
-  {{buttonName}}
-</button>
 
-<ng-container   *ngIf="show">
 
-  <form class=" subscribe container-fluid" (ngSubmit)="onSubmit()" #myForm="ngForm">
+<div class="container-fluid block ">
+ 
+
+  <form class=" subscribe offset-3 col-6" (ngSubmit)="onSubmit()" #myForm="ngForm">
     <div class="row">
-      <div class="">
-        <p>SUBSCRIBE</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At dolores doloribus enim quibusdam
+      <div class=" ">
+        <p class="titreprincipal">SUBSCRIBE</p>
+        <br>
+        <p class="text offset-2 col-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At dolores doloribus enim quibusdam
           optio maxime tempore quis, provident illum. Doloribus at nemo excepturi ipsum debitis animi officiis hic
           veniam
           maxime?</p>
       </div>
 
-      <div class="formulaire col-12">
+      <div class="formulaire offset-4 col-2 ">
         <div class="pseudonyme  ">
           <div>
-            <label class="titre col-12" for="pseudo-order">Pseudo</label>
+            <label class="titre " for="pseudo-order">Pseudo</label>
             <input name="pseudo-order" type="text" [(ngModel)]="model.pseudo" #pseudo="ngModel" required minlength="4"
               maxlength="20">
           </div>
@@ -32,7 +32,7 @@
 
         <div class="lemail  ">
           <div>
-            <label class="titre col-12" for="contactmail-order">Email</label>
+            <label class="titre " for="contactmail-order">Email</label>
             <input name="contactmail-order" type="email" [(ngModel)]="model.contactmail" #contactmail="ngModel" required
               email>
           </div>
@@ -46,8 +46,8 @@
 
         <div class="motdepasse ">
           <div>
-            <label class=" titre col-12" for="password-order">Password</label>
-            <input name="password-order" type="text" [(ngModel)]="model.password" #password="ngModel" required
+            <label class=" titre " for="password-order">Password</label>
+            <input  name="password-order" type="text" [(ngModel)]="model.password" #password="ngModel" required
               minlength="4" maxlength="15">
           </div>
           <div *ngIf="myForm.submitted">
@@ -63,11 +63,14 @@
 
 
       <div class="container-fluid ">
-        <button class="col-6 allbutton" type="reset">Refresh</button>
+        <button class="offset-1 col-4 allbutton rounded" type="reset">Refresh</button>
 
-        <button class="col-6 allbutton" type="submit">Save</button>
+        <button class="offset-2 col-4 allbutton rounded" type="submit">Save</button>
+        
       </div>
+      
     </div>
+
   </form>
 
-</ng-container>
+</div>

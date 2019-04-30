@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { quest1 } from '../nasaConst';
 import { nasa } from '../nasaClassInfo';
 import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-quiz',
@@ -9,6 +11,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+
   public firstQuest: nasa[] = quest1;
   public q1: string = "Title of picture ?";
   public answerQ1: string[] = [
@@ -17,6 +20,7 @@ export class QuizComponent implements OnInit {
     "title2",
     "title3",
   ];
+
 
   public q2: string = "Nasa Identification ?"
   public answerQ2: string[] = [
