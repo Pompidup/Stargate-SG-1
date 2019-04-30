@@ -65,7 +65,7 @@ export class NasaService {
          // console.log(quest3);
           forReturn = quest3;
         } else {
-          console.log("error dans les condition quest");
+          console.log("error dans les conditions quest");
         };
 
 

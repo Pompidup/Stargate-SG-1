@@ -7,10 +7,15 @@
   </div>
   <app-gate class="offset-4"></app-gate>
 
+
   <div class="positionButton col-12">
     <button type="button" class="btn btn-light btn-lg col-1 ml-5" [routerLink]="['../quest']">QUEST</button>
     <button type="button" class="btn btn-light btn-lg offset-9" [routerLink]="['../contact-us']">CONTACT US</button>
   </div>
-  
+
+  <div>
+    <app-subscribe class="offset-10"></app-subscribe>
+    <a [routerLink]="['../picture-viewer']">Picture viewer</a>
+  </div>
   <a [routerLink]="['../subscribe']">subscribe</a>
 </div>
