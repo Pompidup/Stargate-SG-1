@@ -8,6 +8,7 @@ import { PictureViewerComponent } from './picture-viewer/picture-viewer.componen
 import { HightscoreComponent } from './hightscore/hightscore.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { GateComponent } from './gate/gate.component';
+import { WormHoleComponent } from './worm-hole/worm-hole.component'
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'hightscore', component: HightscoreComponent },
   { path: 'subscribe', component: SubscribeComponent },
   { path: 'gate', component: GateComponent },
+  { path: 'worm-hole', component: WormHoleComponent },
   { path: '', redirectTo: 'stargate', pathMatch: 'full' },
 ];
 
