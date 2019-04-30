@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { nasa } from './nasaClassInfo';
-import { quest1 } from './nasaConst';
+import { quest1, quest2, quest3 } from './nasaConst';
 import { quest } from './nasaConst';
 
 
@@ -18,7 +18,7 @@ export class NasaService {
 
   }
 
-  public getNasaresults(param_query: string): Observable<any> {
+  public getNasaresults(param_query: string, param_quest: number): Observable<any> {
 
     const url: string = "https://images-api.nasa.gov/search?q=" + param_query;
 
@@ -29,6 +29,7 @@ export class NasaService {
       let collection: any = param_data.collection;
       let items: any[] = collection.items;
       let current = null;
+      let forReturn: nasa[];
 
       for (let i: number = 0; i < items.length; i++) {
 
@@ -43,16 +44,34 @@ export class NasaService {
           tmp.title = current.data[0].title;
           quest.push(tmp);
           //  console.log("contenu de quest1 dans le service");
-         // console.log(quest);
+          // console.log(quest);
 
         }
       }
-      for (let i: number = 0; i < 6; i++) {
+      for (let j: number = 0; j < 6; j++) {
+        console.log(j)
         let tmp: number = Math.floor(Math.random() * Math.floor(quest.length));
-        quest1.push(quest[tmp]);
-        console.log(quest1);
+
+        if (param_quest == 0) {
+          quest1.push(quest[tmp]);
+         // console.log(quest1);
+          forReturn = quest1;
+        } else if (param_quest == 1) {
+          quest2.push(quest[tmp]);
+         // console.log(quest2);
+          forReturn = quest2;
+        } else if (param_quest == 2) {
+          quest3.push(quest[tmp]);
+         // console.log(quest3);
+          forReturn = quest3;
+        } else {
+          console.log("error dans les conditions quest");
+        };
+
+
+
       }
-      return quest1;
+      return forReturn;
     };
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-
+import { tabCode, code } from '../codeDial';
 @Component({
   selector: 'app-dial',
   templateUrl: './dial.component.html',
@@ -10,6 +10,10 @@ export class DialComponent implements OnInit {
   @Output()
   public onDestinationComplete: EventEmitter<number[]>;
   private _signs: number[];
+  private btnNumber: string[] = [];
+  private tabcode: code[] = tabCode;
+  private tmp: string[] = this.tabcode[0].btn;
+  public codeOk: boolean = false;
 
   constructor() {
     this._signs = [];
@@ -39,6 +43,34 @@ export class DialComponent implements OnInit {
     let classes: string = btn.getAttribute("class");
     classes += " active";
     btn.setAttribute("class", classes);
+    // console.log(p_buttonClass);
+    this.btnNumber.push(p_buttonClass);
+    // console.log(this.btnNumber);
+    // console.log(this.tabcode[0].btn);
+    // console.log(this.tmp);
+    this.testCode();
+
   }
+
+  public testCode(): boolean {
+
+    for (let i: number = 0; i < this.btnNumber.length; i++) {
+      if (this.btnNumber[i] == this.tmp[i]) {
+        this.codeOk = true;
+      } else {
+        this.codeOk = false;
+      }
+    };
+
+    if (this.codeOk){
+  //    console.log("Bien joué champion")
+    } else {
+  //    console.log("FAILLLLLLLEEEEDDD")
+    };
+    return this.codeOk;
+
+  };
+
+
 
 }
