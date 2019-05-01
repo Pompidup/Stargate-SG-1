@@ -1,92 +1,97 @@
 <form #quizForm="ngForm">
 
-  <div class="container">
-    <div class="row mb-3">
-      <div class="bg-light col-12 rounded border border-warning">
-        <div class="form-group text-center mt-3 font-weight-bold">
-          <label for="formGroupExampleInput">{{q1}} </label>
+  <div class="container-fluid ">
+    <div class="bg-light offset-2 col-8 rounded border border-warning mb-3 block">
+      <div class=" row">
+
+        <div class="  col-5 ">
+          <label class="titre" for="formGroupExampleInput">{{q1}} </label>
         </div>
-        <div class="row">
-            <div class="form-check col">
-              <input class="form-check-input col-6" (change)="check($event)" type="checkbox" id="q1r1">
-              <label class="form-check-label d-flex justify-content-center"  for="gridCheck">
-                {{answerQ1[0]}}
-              </label>
-            </div>
-            <div class="form-check col">
-              <input class="form-check-input col-6"  type="checkbox" id="gridCheck">
-              <label class="form-check-label d-flex justify-content-center" for="gridCheck">
-                  {{answerQ1[1]}}
-              </label>
-            </div>
-            <div class="form-check col mb-3">
-              <input class="form-check-input col-6" type="checkbox" id="gridCheck">
-              <label class="form-check-label d-flex justify-content-center" for="gridCheck">
-                  {{answerQ1[2]}}
-              </label>
-            </div>
+        <div class="q1 col-7">
+          <div class="form-check offset-1 col-7">
+            <input class="form-check-input " (change)="check($event)" type="checkbox" id="q1r1">
+            <label class="form-check-label d-flex  justify-content-center" for="gridCheck">
+              {{answerQ1[0]}}
+            </label>
+          </div>
+          <div class="form-check offset-1 col-7">
+            <input class="form-check-input " type="checkbox" id="gridCheck">
+            <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+              {{answerQ1[1]}}
+            </label>
+          </div>
+          <div class="form-check offset-1 col-7 mb-3">
+            <input class="form-check-input " type="checkbox" id="gridCheck">
+            <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+              {{answerQ1[2]}}
+            </label>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="row mb-3">
-        <div class="bg-light col-12 rounded border border-warning">
-          <div class="form-group text-center mt-3 font-weight-bold">
-            <label for="formGroupExampleInput">{{q2}} </label>
-          </div>
-          <div class="row">
-              <div class="form-check col">
-                <input class="form-check-input col-6" type="checkbox" id="gridCheck">
-                <label class="form-check-label d-flex justify-content-center" for="gridCheck">
-                  {{answerQ2[0]}}
-                </label>
-              </div>
-              <div class="form-check col">
-                <input class="form-check-input col-6" type="checkbox" id="gridCheck">
-                <label class="form-check-label d-flex justify-content-center" for="gridCheck">
-                  {{answerQ2[1]}}
-                </label>
-              </div>
-              <div class="form-check col mb-3">
-                <input class="form-check-input col-6" (change)="check($event)" type="checkbox" id="gridCheck">
-                <label class="form-check-label d-flex justify-content-center" for="gridCheck">
-                  {{answerQ2[2]}}
-                </label>
-              </div>
-          </div>
-        </div>
-      </div>
+    <div class="bg-light offset-2 col-8 rounded border border-warning mb-3 block">
+      <div class="row ">
 
-      <div class="row">
-          <div class="bg-light col-12 rounded border border-warning">
-            <div class="form-group text-center mt-3 font-weight-bold">
-              <label for="formGroupExampleInput">{{q3}} </label>
-            </div>
-            <div class="row">
-                <div class="form-check col">
-                  <input class="form-check-input col-6" type="checkbox" id="gridCheck">
-                  <label class="form-check-label d-flex justify-content-center" for="gridCheck">
-                    {{answerQ3[0]}}
-                  </label>
-                </div>
-                <div class="form-check col">
-                  <input class="form-check-input col-6" (change)="check($event)" type="checkbox" id="gridCheck">
-                  <label class="form-check-label d-flex justify-content-center" for="gridCheck">
-                    {{answerQ3[1]}}
-                  </label>
-                </div>
-                <div class="form-check col mb-3">
-                  <input class="form-check-input col-6" type="checkbox" id="gridCheck">
-                  <label class="form-check-label d-flex justify-content-center" for="gridCheck">
-                    {{answerQ3[2]}}
-                  </label>
-                </div>
-            </div>
+        <div class="col-5">
+          <label for="formGroupExampleInput">{{q2}} </label>
+        </div>
+        <div class="q1 col-7">
+          <div class="form-check offset-1 col-8">
+            <input class="form-check-input " type="checkbox" id="gridCheck">
+            <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+              {{answerQ2[0]}}
+            </label>
+          </div>
+          <div class="form-check offset-1 col-8">
+            <input class="form-check-input " type="checkbox" id="gridCheck">
+            <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+              {{answerQ2[1]}}
+            </label>
+          </div>
+          <div class="form-check offset-1 col-8 mb-3">
+            <input class="form-check-input " (change)="check($event)" type="checkbox" id="gridCheck">
+            <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+              {{answerQ2[2]}}
+            </label>
           </div>
         </div>
+
+      </div>
+    </div>
+    <div class="bg-light offset-2 col-8 rounded border border-warning mb-3 block">
+      <div class="row">
+        
+          <div class="col-5">
+            <label for="formGroupExampleInput">{{q3}} </label>
+          </div>
+          <div class="q1 col-7">
+            <div class="form-check offset-1 col-7">
+              <input class="form-check-input " type="checkbox" id="gridCheck">
+              <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+                {{answerQ3[0]}}
+              </label>
+            </div>
+            <div class="form-check offset-1 col-7">
+              <input class="form-check-input " (change)="check($event)" type="checkbox" id="gridCheck">
+              <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+                {{answerQ3[1]}}
+              </label>
+            </div>
+            <div class="form-check offset-1 col-7 mb-3">
+              <input class="form-check-input " type="checkbox" id="gridCheck">
+              <label class="form-check-label d-flex justify-content-center" for="gridCheck">
+                {{answerQ3[2]}}
+              </label>
+            </div>
+          </div>
+        
+      </div>
+    </div>
   </div>
   <div class="col-12 mt-5">
-    <button type="button" (click) = "updatescore()" class="offset-5 col-4 btn btn-outline-secondary btn-lg text-white" [routerLink]="['..']">
+    <button type="button" (click)="updatescore()" class="offset-5 col-4 btn btn-outline-secondary btn-lg text-white"
+      [routerLink]="['..']">
       MISSION CLEAR
     </button>
   </div>

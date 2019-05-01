@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,  } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { QuestComponent } from './quest/quest.component';
 import { QuizComponent } from './quiz/quiz.component';
@@ -15,6 +15,7 @@ import { WormHoleComponent } from './worm-hole/worm-hole.component'
 const routes: Routes = [
   { path: 'quest', component: QuestComponent },
   { path: 'quiz', component: QuizComponent },
+  {path: 'finalquiz' ,component:FinalquizComponent},
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'stargate', component: StargateComponent },
   { path: 'picture-viewer', component: PictureViewerComponent },
