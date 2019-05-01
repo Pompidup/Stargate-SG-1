@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-gate',
   templateUrl: './gate.component.html',
@@ -23,6 +24,12 @@ export class GateComponent implements OnInit {
 
   }
 
+  private random() {
+    let tmp: number = Math.floor(Math.random() * Math.floor(5));
+    console.log(tmp);
+    return tmp+1;
+  };
+
   private _vortex(): void {
 
     let waterSound: HTMLAudioElement = new Audio("assets/sounds/water.mp3");
@@ -36,7 +43,16 @@ export class GateComponent implements OnInit {
         setTimeout(
           () => {
             waterSound.pause();
-            this.router.navigate(['/', 'quest'])
+            let tmp = this.random();
+            let worm:string = 'worm-hole'+tmp;
+            console.log("contenu de worm", worm);
+            this.router.navigate(['/', worm]);
+            setTimeout(
+              () => {
+                this.router.navigate(['/', 'quest']);
+              },
+              5000
+            )
           },
           7100
         )
