@@ -8,7 +8,7 @@ import { PictureViewerComponent } from './picture-viewer/picture-viewer.componen
 import { HightscoreComponent } from './hightscore/hightscore.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { GateComponent } from './gate/gate.component';
-import { WormHoleComponent } from './worm-hole/worm-hole.component';
+import { WormHole1Component } from './worm-hole1/worm-hole1.component';
 import { WormHole2Component } from './worm-hole2/worm-hole2.component';
 import { WormHole3Component } from './worm-hole3/worm-hole3.component';
 import { WormHole4Component } from './worm-hole4/worm-hole4.component';
@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'hightscore', component: HightscoreComponent },
   { path: 'subscribe', component: SubscribeComponent },
   { path: 'gate', component: GateComponent },
-  { path: 'worm-hole', component: WormHoleComponent },
+  { path: 'worm-hole', component: WormHole1Component },
   { path: 'worm-hole2', component: WormHole2Component },
   { path: 'worm-hole3', component: WormHole3Component },
   { path: 'worm-hole4', component: WormHole4Component },
