@@ -8,7 +8,12 @@ import { PictureViewerComponent } from './picture-viewer/picture-viewer.componen
 import { HightscoreComponent } from './hightscore/hightscore.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { GateComponent } from './gate/gate.component';
-import { WormHoleComponent } from './worm-hole/worm-hole.component'
+import { WormHoleComponent } from './worm-hole/worm-hole.component';
+import { WormHole2Component } from './worm-hole2/worm-hole2.component';
+import { WormHole3Component } from './worm-hole3/worm-hole3.component';
+import { WormHole4Component } from './worm-hole4/worm-hole4.component';
+import { WormHole5Component } from './worm-hole5/worm-hole5.component';
+import { FinalquizComponent } from './finalquiz/finalquiz.component';
 
 
 
@@ -23,6 +28,10 @@ const routes: Routes = [
   { path: 'subscribe', component: SubscribeComponent },
   { path: 'gate', component: GateComponent },
   { path: 'worm-hole', component: WormHoleComponent },
+  { path: 'worm-hole2', component: WormHole2Component },
+  { path: 'worm-hole3', component: WormHole3Component },
+  { path: 'worm-hole4', component: WormHole4Component },
+  { path: 'worm-hole5', component: WormHole5Component },
   { path: '', redirectTo: 'stargate', pathMatch: 'full' },
 ];
 
