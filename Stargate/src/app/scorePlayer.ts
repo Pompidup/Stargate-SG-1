@@ -1,5 +1,3 @@
-import { quest } from './nasaConst';
-
 export class score {
   public id:number;
   public name:string;
