@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,  } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { QuestComponent } from './quest/quest.component';
 import { QuizComponent } from './quiz/quiz.component';
@@ -8,12 +8,14 @@ import { PictureViewerComponent } from './picture-viewer/picture-viewer.componen
 import { HightscoreComponent } from './hightscore/hightscore.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { GateComponent } from './gate/gate.component';
+import {FinalquizComponent} from './finalquiz/finalquiz.component';
 
 
 
 const routes: Routes = [
   { path: 'quest', component: QuestComponent },
   { path: 'quiz', component: QuizComponent },
+  {path: 'finalquiz' ,component:FinalquizComponent},
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'stargate', component: StargateComponent },
   { path: 'picture-viewer', component: PictureViewerComponent },
