@@ -27,8 +27,19 @@ export class GateComponent implements OnInit {
   private random() {
     let tmp: number = Math.floor(Math.random() * Math.floor(5));
     console.log(tmp);
-    return tmp+1;
+    return tmp + 1;
   };
+
+  private calcTimeOut(tmp) {
+    let timeOutWorm:number = 0;
+    if (tmp == 1) { timeOutWorm = 8000 };
+    if (tmp == 2) { timeOutWorm = 15000 };
+    if (tmp == 3) { timeOutWorm = 9000 };
+    if (tmp == 4) { timeOutWorm = 14000 };
+    if (tmp == 5) { timeOutWorm = 12000 };
+    console.log('valeur de time : ', timeOutWorm);
+    return timeOutWorm;
+  }
 
   private _vortex(): void {
 
@@ -44,17 +55,18 @@ export class GateComponent implements OnInit {
           () => {
             waterSound.pause();
             let tmp = this.random();
-            let worm:string = 'worm-hole'+tmp;
+            let time = this.calcTimeOut(tmp);
+            let worm: string = 'worm-hole' + tmp;
             console.log("contenu de worm", worm);
             this.router.navigate(['/', worm]);
             setTimeout(
               () => {
                 this.router.navigate(['/', 'quest']);
               },
-              5000
+              time
             )
           },
-          7100
+          6100
         )
         //setTimeout(() => this.router.navigate(['/', 'quest']), 3800, waterSound.pause(), waterSound.currentTime = 0);
       },
