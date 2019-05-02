@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'hightscore', component: HightscoreComponent },
   { path: 'subscribe', component: SubscribeComponent },
   { path: 'gate', component: GateComponent },
-  { path: 'worm-hole', component: WormHole1Component },
+  { path: 'worm-hole1', component: WormHole1Component },
   { path: 'worm-hole2', component: WormHole2Component },
   { path: 'worm-hole3', component: WormHole3Component },
   { path: 'worm-hole4', component: WormHole4Component },
