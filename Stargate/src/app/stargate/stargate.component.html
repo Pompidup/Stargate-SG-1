@@ -1,21 +1,30 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3">
-      <img class="img-responsive" src="../../assets/images/logoTitle.png" style="width:100%">
+
+    <div class="col-lg-3">
+      <img class="img-responsive mt-lg-3" src="../../assets/images/logoTitle.png" [routerLink]="['']" style="width:100%">
+
     </div>
-    <app-hightscore class="offset-9"></app-hightscore>
+    <app-hightscore class="offset-lg-9 mt-lg-3"></app-hightscore>
   </div>
-  <app-gate class="offset-4"></app-gate>
+
+
+  <button type="button" class="btn btn-outline-secondary btn-lg text-white offset-10 col-1 signIn"
+    [routerLink]="['../subscribe']">SIGN
+    IN</button>
+  <app-gate class="offset-lg-10"></app-gate>
 
 
   <div class="positionButton col-12">
-    <button type="button" class="btn btn-light btn-lg col-1 ml-5" [routerLink]="['../quest']">QUEST</button>
-    <button type="button" class="btn btn-light btn-lg offset-9" [routerLink]="['../contact-us']">CONTACT US</button>
+    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../contact-us']">CONTACT
+      US</button>
   </div>
+  <button type="button" class="offset-6 col-3 btn btn-success"><a
+    [routerLink]="['../quest']">quest</a></button>
 
-  <div>
-    <app-subscribe class="offset-10"></app-subscribe>
-    <a [routerLink]="['../picture-viewer']">Picture viewer</a>
-  </div>
-  <a [routerLink]="['../subscribe']">subscribe</a>
+    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole1']">WORM HOLE1</button>
+    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole2']">WORM HOLE2</button>
+    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole3']">WORM HOLE3</button>
+    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole4']">WORM HOLE4</button>
+    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole5']">WORM HOLE5</button>
 </div>

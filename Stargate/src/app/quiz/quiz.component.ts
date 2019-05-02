@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { quest1 } from '../nasaConst';
 import { nasa } from '../nasaClassInfo';
-import { NgForm } from '@angular/forms';
+import { quest1, quest2, quest3 } from '../nasaConst';
+import { player3 } from '../scorePlayer';
+
+
 
 @Component({
   selector: 'app-quiz',
@@ -9,40 +11,30 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+
   public firstQuest: nasa[] = quest1;
-  public q1: string = "Title of picture ?";
-  public answerQ1: string[] = [
-    this.firstQuest[0].title,
-    "title1",
-    "title2",
-    "title3",
-  ];
 
-  public q2: string = "Nasa Identification ?"
-  public answerQ2: string[] = [
-    "00110100111010",
-    "La réponse est idNasa",
-    this.firstQuest[0].idNasa,
-    "Yorann",
-  ];
-  public q3: string = "Stargate secret Identification ?"
-  public answerQ3: string[] = [
-    "C'est un secret",
-    this.firstQuest[0].idMission,
-    "Bonjour demandez mot ?",
-  ];
-
-  onFormSubmit(form: NgForm) {
+  choosenQuest() {
+    if (player3.questProgress === 1) {
+      this.firstQuest = quest1
+      console.log(" 1ST")
+    } else if (player3.questProgress === 2) {
+      this.firstQuest = quest2
+      console.log(" 2ND")
+    } else {
+      this.firstQuest = quest3
+      console.log("3rd")
+    }
   }
 
-constructor() {
-  console.log(this.answerQ1[0])
-}
+  constructor() {
 
-ngOnInit() {
+  }
 
+  ngOnInit() {
+ this.choosenQuest();
 
-}
+  }
 
 }
 

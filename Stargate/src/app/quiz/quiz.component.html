@@ -1,31 +1,28 @@
+<!DOCTYPE html>
+<html>
 
-  {{answerQ1[0]}}
+<head>
+  <meta charset="utf-8">
+  <title>QuizPage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-<form #quizForm="ngForm">
-    <table>
-      <tr>
-        <td>Q1 {{q1}}</td>
-        <td>
-          <input type="radio" value="0" name="rep1" [ngModel]="quiz.rep1" #rep1="ngModel"> qkjshfpishfpiuhfi
-          <input type="radio" value="0" name="rep1" [ngModel]="quiz.rep1" #rep1="ngModel"> mkfoi oizefj ozjef
-          <input type="radio" value="1" name="rep1" [ngModel]="quiz.rep1" #rep1="ngModel"> {{ answerQ1[0] }}
-          <input type="radio" value="0" name="rep1" [ngModel]="quiz.rep1" #rep1="ngModel"> jhzf FEOIUH OU
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button>Submit</button>
-          <button type="button" (click)="setDefaultValues()">Set Default</button>
-        </td>
-      </tr>
-    </table>
-  </form>
+<body>
+  <div class="container-fluid">
 
-  <div class="form-group">
-      <label for="inputEmail">Email</label>
-      <input type="text"
-        [(ngModel)] = "user.email"
-        id="inputEmail"
-        name="email"
-        placeholder="Email">
+
+    <div class="col-6">
+      <img src="../../assets/images/logo.png" class="logo col-lg-2 d-none d-sm-none d-lg-block mt-3" alt="logo" />
+
+
     </div>
+    <div class="row">
+      
+
+        <img src={{firstQuest[0].image}}
+          class="col-4 mt-5" alt="imageAPI" />
+
+        <app-finalquiz class="col-8 mt-5"></app-finalquiz>
+      
+    </div>
+   

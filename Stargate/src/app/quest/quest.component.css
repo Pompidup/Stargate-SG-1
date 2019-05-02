@@ -1,4 +1,5 @@
-ul{
+  
+   ul{
   color: white;
     
      padding:8px;
@@ -56,4 +57,6 @@ p{
     opacity: 1;
     right: 0;
   }
-
+.decalage{
+  margin-top: 4%
+}

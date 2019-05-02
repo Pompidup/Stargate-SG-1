@@ -17,7 +17,12 @@ import { DialComponent } from './dial/dial.component';
 import { SGCComponent } from './sgc/sgc.component';
 import { GateComponent } from './gate/gate.component';
 import { WaterComponent } from './water/water.component';
-import { WormHoleComponent } from './worm-hole/worm-hole.component';
+import { WormHole1Component } from './worm-hole1/worm-hole1.component';
+import { FinalquizComponent } from './finalquiz/finalquiz.component';
+import { WormHole2Component } from './worm-hole2/worm-hole2.component';
+import { WormHole3Component } from './worm-hole3/worm-hole3.component';
+import { WormHole4Component } from './worm-hole4/worm-hole4.component';
+import { WormHole5Component } from './worm-hole5/worm-hole5.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { WormHoleComponent } from './worm-hole/worm-hole.component';
     SGCComponent,
     GateComponent,
     WaterComponent,
-    WormHoleComponent,
+    WormHole1Component,
+    FinalquizComponent,
+    WormHole2Component,
+    WormHole3Component,
+    WormHole4Component,
+    WormHole5Component,
   ],
   imports: [
     FormsModule,
