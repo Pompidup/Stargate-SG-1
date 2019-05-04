@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { WaterEffectService } from '../water-effect.service';
+import { WaterModelService } from '../water-model.service';
+import { RaindropService } from '../raindrop.service';
 
 
 @Component({
@@ -7,11 +10,46 @@ import { Router } from '@angular/router';
   templateUrl: './gate.component.html',
   styleUrls: ['./gate.component.css']
 })
-export class GateComponent implements OnInit {
+export class GateComponent implements OnInit, OnDestroy {
 
-  constructor(private router: Router) { }
+  private raindrop: number[][];
+  private timeout;
+
+  constructor(
+    private router: Router,
+    private waterEffect: WaterEffectService,
+    private waterModel: WaterModelService,
+    private raindropService: RaindropService
+  ) { }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy(){
+    clearTimeout(this.timeout);
+  }
+
+  private doWater():void{
+    let img = new Image();
+    img.addEventListener(
+      "load",
+      () => {
+        
+        let canvas = document.querySelector(".water");
+        this.raindrop = this.raindropService.getRainDrop(16, 16);
+        this.waterModel.reset(512, 512, 4);
+        this.waterModel.touchWater(256, 256, 10, this.raindrop);
+        this.waterEffect.reset(canvas, img, 512, 512);
+        this.render();
+      }
+    );
+    img.src = "./assets/images/electric.jpg";
+  }
+
+  private render(): void {
+    this.waterModel.compute();
+    this.waterEffect.draw(this.waterModel.getInterpolatedFrame(), this.waterModel.evolving);
+    this.timeout = setTimeout(this.render.bind(this), 16);
   }
 
   public travel(p_address: number[]): void {
@@ -24,14 +62,8 @@ export class GateComponent implements OnInit {
 
   }
 
-  private random() {
-    let tmp: number = Math.floor(Math.random() * Math.floor(5));
-    console.log(tmp);
-    return tmp + 1;
-  };
-
   private calcTimeOut(tmp) {
-    let timeOutWorm:number = 0;
+    let timeOutWorm: number = 0;
     if (tmp == 1) { timeOutWorm = 8000 };
     if (tmp == 2) { timeOutWorm = 15000 };
     if (tmp == 3) { timeOutWorm = 9000 };
@@ -45,19 +77,19 @@ export class GateComponent implements OnInit {
 
     let waterSound: HTMLAudioElement = new Audio("assets/sounds/water.mp3");
     let vortexSound: HTMLAudioElement = new Audio("assets/sounds/open.mp3");
-    let waterEffect: any = document.getElementsByClassName("water")[0];
     vortexSound.play();
+
     setTimeout(
       () => {
-        waterEffect.style.opacity = '1';
+        this.doWater();
         waterSound.play();
+        
         setTimeout(
           () => {
             waterSound.pause();
-            let tmp = this.random();
-            let time = this.calcTimeOut(tmp);
+            let tmp = Math.floor(Math.random() * Math.floor(5)) + 1;
+            let time = this.calcTimeOut(tmp) ;
             let worm: string = 'worm-hole' + tmp;
-            console.log("contenu de worm", worm);
             this.router.navigate(['/', worm]);
             setTimeout(
               () => {
@@ -66,15 +98,12 @@ export class GateComponent implements OnInit {
               time
             )
           },
-          6100
-        )
-        //setTimeout(() => this.router.navigate(['/', 'quest']), 3800, waterSound.pause(), waterSound.currentTime = 0);
+          10000
+        );
       },
       1000
     )
   };
-
-
 
   private _spin(p_num: number): void {
 

@@ -11,11 +11,21 @@
 .rotation6{ transform: rotate(40deg); }
 .rotation7{ transform: rotate(270deg); }
 
+.texture{
+    display: none;
+}
+
 .stargate {
     position: relative;
     z-index: 100;
     width: 512px;
+}
 
+
+
+.stargate .water{
+    position: absolute;
+    z-index: 70;
 }
 
 .stargate .gate {
@@ -61,14 +71,6 @@
     transform: rotate(0deg);
 }
 
-.water{
-    position: absolute;
-    width: 500px;
-    left: 725px; 
-    opacity: 0;  
-    border-radius: 70%;
-
-}
 .stargate .lock2 {
     left: 1px;
     top: 60px;
