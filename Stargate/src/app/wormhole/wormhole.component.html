@@ -1,0 +1,9 @@
+<div [ngClass]="videoStyle"></div>
+<video *ngIf="videoSrc != null" 
+            class="fullscreen-bg__video" 
+            src={{videoSrc}} 
+            autoplay="true" 
+            type="video/mp4" 
+            (timeupdate)="onPlay($event)"
+            (ended)="endHandler()" 
+            (canplay)="start()"></video>

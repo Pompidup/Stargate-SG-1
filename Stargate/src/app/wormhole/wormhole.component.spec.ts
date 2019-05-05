@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WormHole4Component } from './worm-hole4.component';
+import { WormholeComponent } from './wormhole.component';
 
-describe('WormHole4Component', () => {
-  let component: WormHole4Component;
-  let fixture: ComponentFixture<WormHole4Component>;
+describe('WormholeComponent', () => {
+  let component: WormholeComponent;
+  let fixture: ComponentFixture<WormholeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WormHole4Component ]
+      declarations: [ WormholeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WormHole4Component);
+    fixture = TestBed.createComponent(WormholeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
