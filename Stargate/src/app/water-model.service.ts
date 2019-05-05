@@ -7,7 +7,7 @@ export class WaterModelService {
 
   public resolution: number = 1.0;
   public damping: number = 0.985;
-  public clipping: number = 5;
+  public clipping: number = 15;
   public evolveThreshold: number = 0.05;
   public width: number = 1;
   public height: number = 1;
