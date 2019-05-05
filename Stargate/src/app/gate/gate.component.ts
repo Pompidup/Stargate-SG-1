@@ -68,12 +68,11 @@ export class GateComponent implements OnInit, OnDestroy {
 
     public travel(p_address: number[]): void {
 
-        // for (let i: number = 0; i < 7; i++) {
-        //     // this._spin(i);
-        // }
+        for (let i: number = 0; i < 7; i++) {
+            this._spin(i);
+        }
 
-        // setTimeout(() => this._vortex(), 28000);
-        this._vortex();
+        setTimeout(() => this._vortex(), 28000);
 
     }
 
