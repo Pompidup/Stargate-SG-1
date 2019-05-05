@@ -7,159 +7,152 @@ import { WormHoleService } from '../worm-hole.service';
 
 
 @Component({
-  selector: 'app-gate',
-  templateUrl: './gate.component.html',
-  styleUrls: ['./gate.component.css']
+    selector: 'app-gate',
+    templateUrl: './gate.component.html',
+    styleUrls: ['./gate.component.css']
 })
 export class GateComponent implements OnInit, OnDestroy {
 
-  private raindrop: number[][];
-  private timeout;
+    private raindrop: number[][];
+    private timeout;
 
-  constructor(
-    private router: Router,
-    private waterEffect: WaterEffectService,
-    private waterModel: WaterModelService,
-    private raindropService: RaindropService, 
-    private wormHole:WormHoleService
-  ) { }
+    constructor(
+        private router: Router,
+        private waterEffect: WaterEffectService,
+        private waterModel: WaterModelService,
+        private raindropService: RaindropService,
+        private wormHole: WormHoleService
+    ) { }
 
-  ngOnInit() {
-  }
-
-  ngOnDestroy(){
-    clearTimeout(this.timeout);
-  }
-
-  private doWater():void{
-    let img = new Image();
-    img.addEventListener(
-      "load",
-      () => {
-        
-        let canvas = document.querySelector(".water");
-        this.raindrop = this.raindropService.getRainDrop(8, 8);
-
-        this.waterModel.reset(512, 512, 4);
-        this.waterModel.touchWater(256, 256, 15, this.raindropService.getRainDrop(32, 32) );
-        this.waterEffect.reset(canvas, img, 512, 512);
-        this.render();
-      }
-    );
-    img.src = "./assets/images/stargate.png";
-  }
-
-  private render(): void {
-
-    let x:number = 0;
-    let y:number = 0;
-    let random:number = Math.random();
-
-    if( random > 0.1 ){
-      x = ( this.waterEffect.width >> 2 ) + ( Math.random() * this.waterEffect.width >> 1 );
-      y = (this.waterEffect.height >> 2 ) + ( Math.random() * this.waterEffect.height >> 1);
-      this.waterModel.touchWater(x, y, -Math.random() * 2, this.raindrop);
+    ngOnInit() {
     }
 
-    this.waterModel.compute();
-    this.waterEffect.draw(this.waterModel.getInterpolatedFrame(), this.waterModel.evolving);
-    this.timeout = setTimeout(this.render.bind(this), 16);
-  }
-
-  public travel(p_address: number[]): void {
-
-    for (let i: number = 0; i < 7; i++) {
-      this._spin(i);
+    ngOnDestroy() {
+        clearTimeout(this.timeout);
     }
 
-    setTimeout(() => this._vortex(), 28000);
+    private doWater(): void {
+        let img = new Image();
+        img.addEventListener(
+            "load",
+            () => {
 
-  }
+                let canvas = document.querySelector(".water");
+                this.raindrop = this.raindropService.getRainDrop(8, 8);
 
-  private _vortex(): void {
-
-    let waterSound: HTMLAudioElement = new Audio("assets/sounds/water.mp3");
-    let vortexSound: HTMLAudioElement = new Audio("assets/sounds/open.mp3");
-    vortexSound.play();
-
-    setTimeout(
-      () => {
-        this.doWater();
-        waterSound.play();
-        
-        
-        setTimeout(
-          () => {
-            waterSound.pause();
-           this.wormHole.travel("quest", 0);
-          },
-          10000
+                this.waterModel.reset(512, 512, 4);
+                this.waterModel.touchWater(256, 256, 15, this.raindropService.getRainDrop(32, 32));
+                this.waterEffect.reset(canvas, img, 512, 512);
+                this.render();
+            }
         );
-        
-      },
-      1000
-    )
-  };
+        img.src = "./assets/images/stargate.png";
+    }
 
-  private _spin(p_num: number): void {
+    private render(): void {
 
-    let rotationSound: HTMLAudioElement = new Audio("assets/sounds/rotate.mp3");
-    let lockedSound: HTMLAudioElement = new Audio("assets/sounds/chevron_lock.mp3");
-    let ring: any = document.getElementsByClassName("ring")[0];
+        let x: number = 0;
+        let y: number = 0;
+        let random: number = Math.random();
 
-    // console.log(waterEffect);
-    // let lock: any = document.getElementsByClassName("lock")[p_num];
-    setTimeout(
-      () => {
-        rotationSound.pause();
-        rotationSound.currentTime = 8;
-        rotationSound.volume = 0.5;
-        rotationSound.play();
-        ring.setAttribute("class", "ring rotation" + (p_num + 1));
-        // lock.setAttribute("class", "lock"+(p_num+1) + " lock base-on center-on");
+        if (random > 0.1) {
+            x = (this.waterEffect.width >> 2) + (Math.random() * this.waterEffect.width >> 1);
+            y = (this.waterEffect.height >> 2) + (Math.random() * this.waterEffect.height >> 1);
+            this.waterModel.touchWater(x, y, -Math.random() * 2, this.raindrop);
+        }
 
-        setTimeout(
-          () => {
-            let lock: any = document.getElementsByClassName("lock")[p_num];
-            console.log(lock);
-            let base_off: any = lock.getElementsByClassName("base-off")[0];
-            // console.log(base_off);
-            let base_on: any = lock.getElementsByClassName("base-on")[0];
-            let center_off: any = lock.getElementsByClassName("center-off")[0];
-            let center_on: any = lock.getElementsByClassName("center-on")[0];
+        this.waterModel.compute();
+        this.waterEffect.draw(this.waterModel.getInterpolatedFrame(), this.waterModel.evolving);
+        this.timeout = setTimeout(this.render.bind(this), 16);
+    }
 
-            base_off.style.opacity = '0';
-            base_on.style.opacity = '1';
-            center_off.style.opacity = '0';
-            center_on.style.opacity = '1';
-            base_on.style.transform = 'translateY(-10px)';
+    public travel(p_address: number[]): void {
 
-          },
-          3500
-        )
+        // for (let i: number = 0; i < 7; i++) {
+        //     // this._spin(i);
+        // }
 
+        // setTimeout(() => this._vortex(), 28000);
+        this._vortex();
 
+    }
 
-        //base_on.style.transition = 'transform 1s';
+    private _vortex(): void {
 
-        // waterEffect.style.opacity = '1';
-        //base_on.style.transition = 'transition-delay: 0.5s';
-        //base_on.style.transform = 'translateY(0px)';
-        // console.log(p_num);
+        let waterSound: HTMLAudioElement = new Audio("assets/sounds/water.mp3");
+        let vortexSound: HTMLAudioElement = new Audio("assets/sounds/open.mp3");
+        vortexSound.play();
 
         setTimeout(
-          () => {
-            lockedSound.pause();
-            lockedSound.currentTime = 0;
-            lockedSound.play();
-          },
-          2000
+            () => {
+                this.doWater();
+                waterSound.play();
+                setTimeout( () => { waterSound.pause(); }, 10000);
+                this.wormHole.travel("quest", 10000);
+            },
+            1000
+        );
+    }
 
-        )
+    private _spin(p_num: number): void {
 
-      },
-      p_num * 4000
-    );
-  }
+        let rotationSound: HTMLAudioElement = new Audio("assets/sounds/rotate.mp3");
+        let lockedSound: HTMLAudioElement = new Audio("assets/sounds/chevron_lock.mp3");
+        let ring: any = document.getElementsByClassName("ring")[0];
+
+        // console.log(waterEffect);
+        // let lock: any = document.getElementsByClassName("lock")[p_num];
+        setTimeout(
+            () => {
+                rotationSound.pause();
+                rotationSound.currentTime = 8;
+                rotationSound.volume = 0.5;
+                rotationSound.play();
+                ring.setAttribute("class", "ring rotation" + (p_num + 1));
+                // lock.setAttribute("class", "lock"+(p_num+1) + " lock base-on center-on");
+
+                setTimeout(
+                    () => {
+                        let lock: any = document.getElementsByClassName("lock")[p_num];
+                        console.log(lock);
+                        let base_off: any = lock.getElementsByClassName("base-off")[0];
+                        // console.log(base_off);
+                        let base_on: any = lock.getElementsByClassName("base-on")[0];
+                        let center_off: any = lock.getElementsByClassName("center-off")[0];
+                        let center_on: any = lock.getElementsByClassName("center-on")[0];
+
+                        base_off.style.opacity = '0';
+                        base_on.style.opacity = '1';
+                        center_off.style.opacity = '0';
+                        center_on.style.opacity = '1';
+                        base_on.style.transform = 'translateY(-10px)';
+
+                    },
+                    3500
+                )
+
+
+
+                //base_on.style.transition = 'transform 1s';
+
+                // waterEffect.style.opacity = '1';
+                //base_on.style.transition = 'transition-delay: 0.5s';
+                //base_on.style.transform = 'translateY(0px)';
+                // console.log(p_num);
+
+                setTimeout(
+                    () => {
+                        lockedSound.pause();
+                        lockedSound.currentTime = 0;
+                        lockedSound.play();
+                    },
+                    2000
+
+                )
+
+            },
+            p_num * 4000
+        );
+    }
 
 }

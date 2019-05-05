@@ -12,33 +12,27 @@ export class WormHoleService {
     this.nextRoute = null;
   }
 
+  public getWormholeVideo(): string {
+    let tmp: number = Math.floor(Math.random() * 5) + 1;
+    return "./assets/wormHoleVideo/worm" + tmp + ".mp4";
+  }
+
+  public next(): void {
+    this.router.navigate(['/', this.nextRoute]);
+  }
+
   public travel(p_nextRoute: string, p_delayBeforeTravel: number = 0): void {
 
-
-    let tmp = Math.floor(Math.random() * Math.floor(5)) + 1;
-    let timeOutWorm: number = 0;
-    if (tmp == 1) { timeOutWorm = 8000 };
-    if (tmp == 2) { timeOutWorm = 15000 };
-    if (tmp == 3) { timeOutWorm = 9000 };
-    if (tmp == 4) { timeOutWorm = 14000 };
-    if (tmp == 5) { timeOutWorm = 12000 };
-
-    let worm: string = 'worm-hole' + tmp;
+    let worm: string = 'wormhole';
+    this.nextRoute = p_nextRoute;
 
     setTimeout(
       () => {
         this.nextRoute = p_nextRoute;
         this.router.navigate(['/', worm]);
-      }, 
+      },
       p_delayBeforeTravel
     );
-
-    setTimeout(
-      () => {
-            this.router.navigate(['/', this.nextRoute]);
-      }, 
-      p_delayBeforeTravel + timeOutWorm
-    )
 
   }
 }
