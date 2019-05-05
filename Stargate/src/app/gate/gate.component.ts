@@ -96,7 +96,7 @@ export class GateComponent implements OnInit, OnDestroy {
         this.doWater();
         waterSound.play();
         
-        /*
+        
         setTimeout(
           () => {
             waterSound.pause();
@@ -113,7 +113,7 @@ export class GateComponent implements OnInit, OnDestroy {
           },
           10000
         );
-        */
+        
       },
       1000
     )
