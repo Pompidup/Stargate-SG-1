@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { WaterEffectService } from '../water-effect.service';
 import { WaterModelService } from '../water-model.service';
 import { RaindropService } from '../raindrop.service';
+import { WormHoleService } from '../worm-hole.service';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class GateComponent implements OnInit, OnDestroy {
     private router: Router,
     private waterEffect: WaterEffectService,
     private waterModel: WaterModelService,
-    private raindropService: RaindropService
+    private raindropService: RaindropService, 
+    private wormHole:WormHoleService
   ) { }
 
   ngOnInit() {
@@ -74,17 +76,6 @@ export class GateComponent implements OnInit, OnDestroy {
 
   }
 
-  private calcTimeOut(tmp) {
-    let timeOutWorm: number = 0;
-    if (tmp == 1) { timeOutWorm = 8000 };
-    if (tmp == 2) { timeOutWorm = 15000 };
-    if (tmp == 3) { timeOutWorm = 9000 };
-    if (tmp == 4) { timeOutWorm = 14000 };
-    if (tmp == 5) { timeOutWorm = 12000 };
-    console.log('valeur de time : ', timeOutWorm);
-    return timeOutWorm;
-  }
-
   private _vortex(): void {
 
     let waterSound: HTMLAudioElement = new Audio("assets/sounds/water.mp3");
@@ -100,16 +91,7 @@ export class GateComponent implements OnInit, OnDestroy {
         setTimeout(
           () => {
             waterSound.pause();
-            let tmp = Math.floor(Math.random() * Math.floor(5)) + 1;
-            let time = this.calcTimeOut(tmp) ;
-            let worm: string = 'worm-hole' + tmp;
-            this.router.navigate(['/', worm]);
-            setTimeout(
-              () => {
-                this.router.navigate(['/', 'quest']);
-              },
-              time
-            )
+           this.wormHole.travel("quest", 0);
           },
           10000
         );
