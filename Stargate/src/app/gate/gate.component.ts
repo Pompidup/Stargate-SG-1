@@ -36,17 +36,29 @@ export class GateComponent implements OnInit, OnDestroy {
       () => {
         
         let canvas = document.querySelector(".water");
-        this.raindrop = this.raindropService.getRainDrop(16, 16);
+        this.raindrop = this.raindropService.getRainDrop(8, 8);
+
         this.waterModel.reset(512, 512, 4);
-        this.waterModel.touchWater(256, 256, 10, this.raindrop);
+        this.waterModel.touchWater(256, 256, 15, this.raindropService.getRainDrop(32, 32) );
         this.waterEffect.reset(canvas, img, 512, 512);
         this.render();
       }
     );
-    img.src = "./assets/images/electric.jpg";
+    img.src = "./assets/images/stargate.png";
   }
 
   private render(): void {
+
+    let x:number = 0;
+    let y:number = 0;
+    let random:number = Math.random();
+
+    if( random > 0.1 ){
+      x = ( this.waterEffect.width >> 2 ) + ( Math.random() * this.waterEffect.width >> 1 );
+      y = (this.waterEffect.height >> 2 ) + ( Math.random() * this.waterEffect.height >> 1);
+      this.waterModel.touchWater(x, y, -Math.random() * 2, this.raindrop);
+    }
+
     this.waterModel.compute();
     this.waterEffect.draw(this.waterModel.getInterpolatedFrame(), this.waterModel.evolving);
     this.timeout = setTimeout(this.render.bind(this), 16);
@@ -84,6 +96,7 @@ export class GateComponent implements OnInit, OnDestroy {
         this.doWater();
         waterSound.play();
         
+        /*
         setTimeout(
           () => {
             waterSound.pause();
@@ -100,6 +113,7 @@ export class GateComponent implements OnInit, OnDestroy {
           },
           10000
         );
+        */
       },
       1000
     )
