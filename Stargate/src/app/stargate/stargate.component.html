@@ -13,18 +13,12 @@
     [routerLink]="['../subscribe']">SIGN
     IN</button>
   <app-gate class="offset-lg-10"></app-gate>
+  <app-dial (onDestinationComplete)="travel($event)"></app-dial>
+ 
 
 
   <div class="positionButton col-12">
     <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../contact-us']">CONTACT
       US</button>
   </div>
-  <button type="button" class="offset-6 col-3 btn btn-success"><a
-    [routerLink]="['../quest']">quest</a></button>
-
-    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole1']">WORM HOLE1</button>
-    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole2']">WORM HOLE2</button>
-    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole3']">WORM HOLE3</button>
-    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole4']">WORM HOLE4</button>
-    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../worm-hole5']">WORM HOLE5</button>
 </div>

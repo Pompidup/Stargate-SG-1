@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { GateComponent } from '../gate/gate.component';
 
 @Component({
   selector: 'app-sgc',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SGCComponent implements OnInit {
 
+  @ViewChild(GateComponent) 
+  private gate:GateComponent;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  public travel(p_adress:number[]):void{
+    this.gate.travel(p_adress);
   }
 
 }

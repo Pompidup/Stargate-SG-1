@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { quest1, quest2, quest3 } from '../nasaConst';
+import { GateComponent } from '../gate/gate.component';
 
 @Component({
   selector: 'app-stargate',
@@ -8,16 +9,15 @@ import { quest1, quest2, quest3 } from '../nasaConst';
 })
 export class StargateComponent implements OnInit {
 
-  constructor() {
-    console.log(quest1);
-    console.log(quest2);
-    console.log(quest3);
+  @ViewChild(GateComponent) gate:GateComponent;
+
+  constructor() {}
+
+   public travel(p_adress:number[]):void{
+    this.gate.travel(p_adress);
    }
 
-  ngOnInit() {
-
-
-  }
+  ngOnInit() {}
 
 }
 
