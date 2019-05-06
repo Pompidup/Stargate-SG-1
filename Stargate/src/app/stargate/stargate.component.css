@@ -1,14 +1,17 @@
-app-hightscore {
-    position: absolute;
+.mycontainer{
+    margin-top: 20px;
+    position: relative;
+    top: 0; 
+    left: 0;
 }
-
-.positionButton {
-    margin-top: 15%
+.gate{
+    margin: auto;
 }
-
-
-.signIn {
-    position: absolute;
-    margin-top: 10%;
+.dial{
+    margin: auto;
+    position: absolute; 
+    z-index: 500;
+    top: 412px;
+    left: 112px;
 }
 

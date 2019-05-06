@@ -42,7 +42,7 @@ export class GateComponent implements OnInit, OnDestroy {
 
                 this.waterModel.reset(512, 512, 4);
                 this.waterModel.touchWater(256, 256, 15, this.raindropService.getRainDrop(32, 32));
-                this.waterEffect.reset(canvas, img, 512, 512);
+                this.waterEffect.reset(canvas, img, 256, 30);
                 this.render();
             }
         );

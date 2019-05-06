@@ -14,17 +14,19 @@ export class WaterEffectService {
   private texPixels: any;
   private workBuffer: any;
   private alphaMap: number[][];
+  private radiusOffset: number;
 
   constructor() { }
 
-  public reset(canvas, texture, width, height): void {
+  public reset(canvas, texture, radius, radiusOffset: number = 0): void {
     this.canvas = canvas;
     this.texture = texture;
-    this.width = width;
-    this.height = height;
-    this.canvas.width = width;
-    this.canvas.height = height;
+    this.width = radius * 2;
+    this.height = radius * 2;
+    this.canvas.width = this.width;
+    this.canvas.height = this.height;
     this.appearAlpha = 50;
+    this.radiusOffset = radiusOffset;
     this.buildBuffers();
   }
 
@@ -33,14 +35,19 @@ export class WaterEffectService {
     let canvas = this.canvas;
     let context = canvas.getContext("2d");
     let degtorad = Math.PI / 180;
+    let radius:number = ( this.width >> 1 ) - this.radiusOffset;
+    let centerX:number = this.width >> 1;
+    let centerY:number = this.height >> 1;
+
+    console.log(radius);
 
     context.clearRect(0, 0, this.width, this.height);
     context.save();
 
     context.beginPath();
     context.fillStyle = "red";
-    context.moveTo(this.width >> 1, this.height >> 1);
-    context.arc(this.width >> 1, this.height >> 1, this.width >> 1, 0, 360 * degtorad);
+    context.moveTo(centerX, centerX);
+    context.arc(centerX,centerY,radius, 0, 360 * degtorad);
     context.fill();
     context.closePath();
 
@@ -145,7 +152,7 @@ export class WaterEffectService {
     }
 
     // progressive apparition
-    this.appearAlpha = (this.appearAlpha + 3> 230) ? 230 : this.appearAlpha + 3; 
+    this.appearAlpha = (this.appearAlpha + 3 > 230) ? 230 : this.appearAlpha + 3;
 
     context.putImageData(this.workBuffer, 0, 0);
   }

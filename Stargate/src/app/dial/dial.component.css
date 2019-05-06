@@ -1,29 +1,25 @@
 
  .dhd {
-    z-index: 220;
     position: relative;
     top: 0; 
     left: 0;
-    width: 512px;
-}
-
- .dhd .bg {
-    position: relative;
-    top: 0px;
-    left: 0px;
     width: 300px;
     height: 300px;
-    margin: auto;
     background: url("../../assets/images/dhd_blank.png");
 }
 
+ .dhd .bg {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+ }
+
  .dhd .btn-start {
-    z-index: 505;
-    position: relative;
-    top: -207px;
+    position: absolute;
+    top: 93px;
+    left: 93px;
     width: 113px;
     height: 113px;
-    margin: auto;
     background: url("../../assets/images/dhd_btn_up.png");
     cursor: pointer;
 }
@@ -33,44 +29,43 @@
 }
 
  .dhd .dhd-btn {
-    z-index: 103;
     cursor: pointer;
     transition-duration: 0.2s;
     position: absolute;
 }
 
-.dhd .btn1{left:199px;top:2px;width:57px;height:55px}
-.dhd .btn2{left:256px;top:2px;width:56px;height:55px}
-.dhd .btn3{left:295px;top:13px;width:66px;height:66px}
-.dhd .btn4{left:328px;top:46px;width:65px;height:66px}
-.dhd .btn5{left:350px;top:94px;width:55px;height:57px}
-.dhd .btn6{left:349px;top:150px;width:56px;height:60px}
-.dhd .btn7{left:328px;top:192px;width:64px;height:63px}
-.dhd .btn8{left:294px;top:223px;width:67px;height:66px}
-.dhd .btn9{left:256px;top:245px;width:55px;height:54px}
-.dhd .btn10{left:199px;top:244px;width:57px;height:55px}
-.dhd .btn11{left:151px;top:222px;width:65px;height:65px}
-.dhd .btn12{left:119px;top:190px;width:65px;height:65px}
-.dhd .btn13{left:107px;top:150px;width:55px;height:58px}
-.dhd .btn14{left:107px;top:91px;width:56px;height:59px}
-.dhd .btn15{left:119px;top:45px;width:65px;height:64px}
-.dhd .btn16{left:151px;top:13px;width:66px;height:66px}
-.dhd .btn17{left:220px;top:55px;width:36px;height:43px}
-.dhd .btn18{left:256px;top:55px;width:35px;height:43px}
-.dhd .btn19{left:277px;top:63px;width:46px;height:47px}
-.dhd .btn20{left:296px;top:84px;width:47px;height:44px}
-.dhd .btn21{left:308px;top:114px;width:43px;height:36px}
-.dhd .btn22{left:308px;top:150px;width:43px;height:38px}
-.dhd .btn23{left:297px;top:174px;width:45px;height:42px}
-.dhd .btn24{left:277px;top:191px;width:45px;height:47px}
-.dhd .btn25{left:256px;top:203px;width:34px;height:42px}
-.dhd .btn26{left:220px;top:203px;width:36px;height:42px}
-.dhd .btn27{left:190px;top:191px;width:44px;height:46px}
-.dhd .btn28{left:169px;top:172px;width:47px;height:45px}
-.dhd .btn29{left:161px;top:150px;width:43px;height:37px}
-.dhd .btn30{left:161px;top:113px;width:43px;height:37px}
-.dhd .btn31{left:170px;top:84px;width:46px;height:44px}
-.dhd .btn32{left:190px;top:63px;width:44px;height:47px}
+.dhd .btn1{left:92px;top:2px;width:57px;height:55px}
+.dhd .btn2{left:149px;top:2px;width:56px;height:55px}
+.dhd .btn3{left:188px;top:13px;width:66px;height:66px}
+.dhd .btn4{left:221px;top:46px;width:65px;height:66px}
+.dhd .btn5{left:243px;top:94px;width:55px;height:57px}
+.dhd .btn6{left:242px;top:150px;width:56px;height:60px}
+.dhd .btn7{left:221px;top:192px;width:64px;height:63px}
+.dhd .btn8{left:187px;top:223px;width:67px;height:66px}
+.dhd .btn9{left:149px;top:245px;width:55px;height:54px}
+.dhd .btn10{left:92px;top:244px;width:57px;height:55px}
+.dhd .btn11{left:44px;top:222px;width:65px;height:65px}
+.dhd .btn12{left:12px;top:190px;width:65px;height:65px}
+.dhd .btn13{left:0px;top:150px;width:55px;height:58px}
+.dhd .btn14{left:0px;top:91px;width:56px;height:59px}
+.dhd .btn15{left:12px;top:45px;width:65px;height:64px}
+.dhd .btn16{left:44px;top:13px;width:66px;height:66px}
+.dhd .btn17{left:113px;top:55px;width:36px;height:43px}
+.dhd .btn18{left:149px;top:55px;width:35px;height:43px}
+.dhd .btn19{left:170px;top:63px;width:46px;height:47px}
+.dhd .btn20{left:189px;top:84px;width:47px;height:44px}
+.dhd .btn21{left:201px;top:114px;width:43px;height:36px}
+.dhd .btn22{left:201px;top:150px;width:43px;height:38px}
+.dhd .btn23{left:190px;top:174px;width:45px;height:42px}
+.dhd .btn24{left:170px;top:191px;width:45px;height:47px}
+.dhd .btn25{left:149px;top:203px;width:34px;height:42px}
+.dhd .btn26{left:113px;top:203px;width:36px;height:42px}
+.dhd .btn27{left:83px;top:191px;width:44px;height:46px}
+.dhd .btn28{left:62px;top:172px;width:47px;height:45px}
+.dhd .btn29{left:54px;top:150px;width:43px;height:37px}
+.dhd .btn30{left:54px;top:113px;width:43px;height:37px}
+.dhd .btn31{left:63px;top:84px;width:46px;height:44px}
+.dhd .btn32{left:83px;top:63px;width:44px;height:47px}
 
 
 

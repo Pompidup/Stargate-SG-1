@@ -1,24 +1,29 @@
-<div class="container-fluid">
+<div class="container-fluid mycontainer">
   <div class="row">
 
-    <div class="col-lg-3">
-      <img class="img-responsive mt-lg-3" src="../../assets/images/logoTitle.png" [routerLink]="['']" style="width:100%">
+    <div class="col-3">
+      <img class="img-responsive lg-3" src="../../assets/images/logoTitle.png" [routerLink]="['']" style="width:100%">
+    </div>
+    <div class="col-6">
+      <app-gate class="gate"></app-gate>
+      <app-dial class="dial" (onDestinationComplete)="travel($event)"></app-dial>
+    </div>
+    <div class="col-3">
+      <div class="row">
+        <app-hightscore class="col-12"></app-hightscore>
+        <div class="positionButton col-12">
+          <button type="button" class="btn btn-outline-secondary btn-lg text-white col-12"
+            [routerLink]="['../contact-us']">
+            CONTACTUS
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-lg text-white col-12"
+            [routerLink]="['../subscribe']">
+            SIGN IN
+          </button>
+        </div>
+      </div>
 
     </div>
-    <app-hightscore class="offset-lg-9 mt-lg-3"></app-hightscore>
-  </div>
 
-
-  <button type="button" class="btn btn-outline-secondary btn-lg text-white offset-10 col-1 signIn"
-    [routerLink]="['../subscribe']">SIGN
-    IN</button>
-  <app-gate class="offset-lg-10"></app-gate>
-  <app-dial (onDestinationComplete)="travel($event)"></app-dial>
- 
-
-
-  <div class="positionButton col-12">
-    <button type="button" class="btn btn-outline-secondary btn-lg text-white mt-5" [routerLink]="['../contact-us']">CONTACT
-      US</button>
   </div>
 </div>
