@@ -4,6 +4,7 @@ import { WaterEffectService } from '../water-effect.service';
 import { WaterModelService } from '../water-model.service';
 import { RaindropService } from '../raindrop.service';
 import { WormHoleService } from '../worm-hole.service';
+import { SoundService } from '../sound.service';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class GateComponent implements OnInit, OnDestroy {
         private waterEffect: WaterEffectService,
         private waterModel: WaterModelService,
         private raindropService: RaindropService,
-        private wormHole: WormHoleService
+        private wormHole: WormHoleService,
+        private soundService: SoundService
     ) { }
 
     ngOnInit() {
@@ -78,15 +80,13 @@ export class GateComponent implements OnInit, OnDestroy {
 
     private _vortex(): void {
 
-        let waterSound: HTMLAudioElement = new Audio("assets/sounds/water.mp3");
-        let vortexSound: HTMLAudioElement = new Audio("assets/sounds/open.mp3");
-        vortexSound.play();
+        this.soundService.play(SoundService.OPEN_GATE);
 
         setTimeout(
             () => {
                 this.doWater();
-                waterSound.play();
-                setTimeout( () => { waterSound.pause(); }, 10000);
+                this.soundService.play(SoundService.WATER_HORIZON);
+                setTimeout(() => { this.soundService.pause(SoundService.WATER_HORIZON); }, 10000);
                 this.wormHole.travel("quest", 10000);
             },
             1000
@@ -95,20 +95,17 @@ export class GateComponent implements OnInit, OnDestroy {
 
     private _spin(p_num: number): void {
 
-        let rotationSound: HTMLAudioElement = new Audio("assets/sounds/rotate.mp3");
-        let lockedSound: HTMLAudioElement = new Audio("assets/sounds/chevron_lock.mp3");
         let ring: any = document.getElementsByClassName("ring")[0];
 
-        // console.log(waterEffect);
-        // let lock: any = document.getElementsByClassName("lock")[p_num];
         setTimeout(
             () => {
-                rotationSound.pause();
-                rotationSound.currentTime = 8;
-                rotationSound.volume = 0.5;
-                rotationSound.play();
+
+                this.soundService.pause(SoundService.RING_ROTATION);
+                this.soundService.setCurrentTime(SoundService.RING_ROTATION, 8);
+                this.soundService.setVolume(SoundService.RING_ROTATION, 0.5);
+                this.soundService.play(SoundService.RING_ROTATION);
+
                 ring.setAttribute("class", "ring rotation" + (p_num + 1));
-                // lock.setAttribute("class", "lock"+(p_num+1) + " lock base-on center-on");
 
                 setTimeout(
                     () => {
@@ -130,20 +127,12 @@ export class GateComponent implements OnInit, OnDestroy {
                     3500
                 )
 
-
-
-                //base_on.style.transition = 'transform 1s';
-
-                // waterEffect.style.opacity = '1';
-                //base_on.style.transition = 'transition-delay: 0.5s';
-                //base_on.style.transform = 'translateY(0px)';
-                // console.log(p_num);
-
                 setTimeout(
                     () => {
-                        lockedSound.pause();
-                        lockedSound.currentTime = 0;
-                        lockedSound.play();
+
+                        this.soundService.pause(SoundService.CHEVRON_LOCKED);
+                        this.soundService.setCurrentTime(SoundService.CHEVRON_LOCKED, 0);
+                        this.soundService.play(SoundService.CHEVRON_LOCKED);
                     },
                     2000
 
