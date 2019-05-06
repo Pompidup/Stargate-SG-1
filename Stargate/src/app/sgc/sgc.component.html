@@ -1,1 +1,7 @@
-<app-stargate></app-stargate>
+<div class="sgc">
+  <div class="sgc_gate">
+      <app-gate></app-gate>
+  </div>
+  <div class="foreground" ></div>
+  <app-dial (onDestinationComplete)="travel($event)" class="dial"></app-dial>
+</div>

@@ -14,11 +14,11 @@ import { NasaService } from './nasa.service';
 import { PictureViewerComponent } from './picture-viewer/picture-viewer.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { DialComponent } from './dial/dial.component';
-import { SGCComponent } from './sgc/sgc.component';
 import { GateComponent } from './gate/gate.component';
 import { WaterComponent } from './water/water.component';
 import { FinalquizComponent } from './finalquiz/finalquiz.component';
 import { WormholeComponent } from './wormhole/wormhole.component';
+import { SGCComponent } from './sgc/sgc.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +32,11 @@ import { WormholeComponent } from './wormhole/wormhole.component';
     PictureViewerComponent,
     SubscribeComponent,
     DialComponent,
-    SGCComponent,
     GateComponent,
     WaterComponent,
     FinalquizComponent,
     WormholeComponent,
+    SGCComponent
   ],
   imports: [
     FormsModule,

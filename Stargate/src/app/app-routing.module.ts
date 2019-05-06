@@ -10,6 +10,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { GateComponent } from './gate/gate.component';
 import { FinalquizComponent } from './finalquiz/finalquiz.component';
 import { WormholeComponent } from './wormhole/wormhole.component';
+import { SGCComponent } from './sgc/sgc.component';
 
 
 
@@ -23,6 +24,8 @@ const routes: Routes = [
   { path: 'hightscore', component: HightscoreComponent },
   { path: 'subscribe', component: SubscribeComponent },
   { path: 'gate', component: GateComponent },
+  { path: 'sgc', component: SGCComponent },
+  { path: 'wormhole', component: WormholeComponent },
   { path: 'wormhole', component: WormholeComponent },
   { path: '', redirectTo: 'stargate', pathMatch: 'full' }
 ];
