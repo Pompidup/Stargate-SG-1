@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { WaterEffectService } from '../water-effect.service';
 import { WaterModelService } from '../water-model.service';
@@ -16,6 +16,8 @@ export class GateComponent implements OnInit, OnDestroy {
 
     private raindrop: number[][];
     private timeout;
+    @Output()
+    public onGateOpened:EventEmitter<boolean>;
 
     constructor(
         private router: Router,
@@ -24,13 +26,16 @@ export class GateComponent implements OnInit, OnDestroy {
         private raindropService: RaindropService,
         private wormHole: WormHoleService,
         private soundService: SoundService
-    ) { }
+    ) { 
+        this.onGateOpened = new EventEmitter<boolean>();
+    }
 
     ngOnInit() {
     }
 
     ngOnDestroy() {
         clearTimeout(this.timeout);
+        this.soundService.pause(SoundService.WATER_HORIZON);
     }
 
     private doWater(): void {
@@ -86,8 +91,7 @@ export class GateComponent implements OnInit, OnDestroy {
             () => {
                 this.doWater();
                 this.soundService.play(SoundService.WATER_HORIZON);
-                setTimeout(() => { this.soundService.pause(SoundService.WATER_HORIZON); }, 10000);
-                this.wormHole.travel("quest", 10000);
+                this.onGateOpened.emit(true);
             },
             1000
         );

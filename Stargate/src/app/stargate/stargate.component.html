@@ -5,7 +5,7 @@
       <img class="img-responsive lg-3" src="../../assets/images/logoTitle.png" [routerLink]="['']" style="width:100%">
     </div>
     <div class="col-6">
-      <app-gate class="gate"></app-gate>
+      <app-gate class="gate" (onGateOpened)="enterWormHole()"></app-gate>
       <app-dial class="dial" (onDestinationComplete)="travel($event)"></app-dial>
     </div>
     <div class="col-3">

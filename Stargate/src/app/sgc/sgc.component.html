@@ -1,6 +1,6 @@
 <div class="sgc">
   <div class="sgc_gate">
-      <app-gate></app-gate>
+      <app-gate (onGateOpened)="allowTravel()" (click)="enterWormHole()"></app-gate>
   </div>
   <div class="foreground" ></div>
   <app-dial (onDestinationComplete)="travel($event)" class="dial"></app-dial>

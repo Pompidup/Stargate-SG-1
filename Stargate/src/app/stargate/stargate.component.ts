@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { quest1, quest2, quest3 } from '../nasaConst';
 import { GateComponent } from '../gate/gate.component';
+import { WormHoleService } from '../worm-hole.service';
 
 @Component({
   selector: 'app-stargate',
@@ -9,15 +10,21 @@ import { GateComponent } from '../gate/gate.component';
 })
 export class StargateComponent implements OnInit {
 
-  @ViewChild(GateComponent) gate:GateComponent;
+  @ViewChild(GateComponent) gate: GateComponent;
 
-  constructor() {}
+  constructor(private wormHole: WormHoleService) { }
 
-   public travel(p_adress:number[]):void{
+  public travel(p_adress: number[]): void {
+    // open gate 
     this.gate.travel(p_adress);
-   }
+  }
 
-  ngOnInit() {}
+  public enterWormHole(): void {
+    // travel throught wormhole in 10s and go to "quest"
+    this.wormHole.travel("quest", 10000);
+  }
+
+  ngOnInit() { }
 
 }
 
